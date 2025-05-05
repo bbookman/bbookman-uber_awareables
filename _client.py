@@ -4,32 +4,8 @@ import requests
 import tzlocal
 from datetime import datetime
 from pathlib import Path
-from config import LIMITLESS_INCLUDE_MARKDOWN, LIMITLESS_INCLUDE_HEADINGS, LIMITLESS_ROOT_URL, JSON_TEST, LIMITLESS_V1_LIFELOGS_ENDPOINT  # Import the config values
-
-def save_json_response(data, endpoint):
-    """
-    Save API response to JSON file if JSON_TEST is enabled
-    """
-    if not JSON_TEST:
-        return
-    
-    # Create json_test directory if it doesn't exist
-    json_dir = Path("./json_test")
-    json_dir.mkdir(exist_ok=True, parents=True)
-    
-    # Create a timestamp for the filename
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    
-    # Create a filename based on the endpoint and timestamp
-    endpoint_name = endpoint.replace('/', '_').strip('_')
-    filename = f"{endpoint_name}_{timestamp}.json"
-    filepath = json_dir / filename
-    
-    # Write JSON response to file
-    with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2)
-    
-    print(f"Saved API response to {filepath}")
+from config import LIMITLESS_INCLUDE_MARKDOWN, LIMITLESS_INCLUDE_HEADINGS, LIMITLESS_ROOT_URL, JSON_TEST, LIMITLESS_V1_LIFELOGS_ENDPOINT
+from debug_json import save_json_response
 
 def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFELOGS_ENDPOINT, limit=50, batch_size=10, includeMarkdown=LIMITLESS_INCLUDE_MARKDOWN, includeHeadings=LIMITLESS_INCLUDE_HEADINGS, date=None, timezone=None, direction="asc"):
     all_lifelogs = []
@@ -66,7 +42,7 @@ def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFE
         data = response.json()
         
         # Save the response to a JSON file if JSON_TEST is enabled
-        save_json_response(data, endpoint)
+        save_json_response(data, endpoint, JSON_TEST)
         
         lifelogs = data.get("data", {}).get("lifelogs", [])
         
