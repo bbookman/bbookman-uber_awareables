@@ -3,3 +3,5 @@ __pycache__
 venv/
 ilimitless/
 .env
+limitless/
+json_test/
