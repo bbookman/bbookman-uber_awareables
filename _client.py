@@ -1,8 +1,9 @@
 import os
 import requests
 import tzlocal
+from config import LIMITLESS_INCLUDE_MARKDOWN, LIMITLESS_ROOT_URL  # Import the config values
 
-def get_lifelogs(api_key, api_url=os.getenv("LIMITLESS_API_URL") or "https://api.limitless.ai", endpoint="v1/lifelogs", limit=50, batch_size=10, includeMarkdown=True, includeHeadings=False, date=None, timezone=None, direction="asc"):
+def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint="v1/lifelogs", limit=50, batch_size=10, includeMarkdown=LIMITLESS_INCLUDE_MARKDOWN, includeHeadings=False, date=None, timezone=None, direction="asc"):
     all_lifelogs = []
     cursor = None
     
