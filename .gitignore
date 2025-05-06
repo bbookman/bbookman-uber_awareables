@@ -1,0 +1,10 @@
+# filepath: /Users/brucebookman/code/bbookman-uber_awareables/.gitignore
+__pycache__
+.venv
+venv/
+.env
+limitless/
+json_test/
+.DS_Store
+vector_db/
+myenv/

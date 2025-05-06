@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-3">
+    <div class="col">
+        <h1>{{ formatted_date }}</h1>
+    </div>
+    <div class="col-auto">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-secondary" id="prev-day-btn">
+                <i class="bi bi-chevron-left"></i> Previous Day
+            </button>
+            <button type="button" class="btn btn-outline-secondary" id="today-btn">
+                Today
+            </button>
+            <button type="button" class="btn btn-outline-secondary" id="next-day-btn">
+                Next Day <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="conversations-container">
+    <div class="d-flex justify-content-center my-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Store the current date
+    let currentDate = "{{ date }}";
+    
+    async function loadDayData(date) {
+        try {
+            const response = await axios.get(`/api/day/${date}`);
+            return response.data;
+        } catch (error) {
+            showAlert(`Error loading data for ${date}: ${error.response?.data?.detail || error.message}`, 'danger');
+            return null;
+        }
+    }
+    
+    function renderConversations(dayData) {
+        const container = document.getElementById('conversations-container');
+        container.innerHTML = '';
+        
+        if (!dayData || dayData.conversation_count === 0) {
+            container.innerHTML = `
+                <div class="alert alert-info">
+                    No conversations found for this date.
+                </div>
+            `;
+            return;
+        }
+        
+        container.innerHTML = `
+            <div class="alert alert-info">
+                ${dayData.conversation_count} conversation${dayData.conversation_count !== 1 ? 's' : ''} on ${dayData.date}
+            </div>
+        `;
+        
+        // Group conversations by hour for better organization
+        const conversationsByHour = {};
+        dayData.conversations.forEach(conv => {
+            const time = conv.time || 'Unknown Time';
+            const hour = time.split(':')[0] + (time.includes('PM') ? ' PM' : ' AM');
+            
+            if (!conversationsByHour[hour]) {
+                conversationsByHour[hour] = [];
+            }
+            conversationsByHour[hour].push(conv);
+        });
+        
+        // Create a card for each hour with its conversations
+        for (const hour in conversationsByHour) {
+            const hourCard = document.createElement('div');
+            hourCard.className = 'card mb-4';
+            
+            hourCard.innerHTML = `
+                <div class="card-header">
+                    <h5>${hour}</h5>
+                </div>
+                <div class="card-body p-0">
+                    <ul class="list-group list-group-flush hour-conversations"></ul>
+                </div>
+            `;
+            
+            const conversationsList = hourCard.querySelector('.hour-conversations');
+            
+            conversationsByHour[hour].forEach(conv => {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                
+                // Source badge
+                let sourceHtml = `<span class="source-tag ${conv.source}">${conv.source}</span>`;
+                
+                // Summary
+                const summaryHtml = `<p class="mb-2">${conv.summary || 'No summary available'}</p>`;
+                
+                // Details section
+                let detailsHtml = '<div class="small text-muted">';
+                if (conv.time) detailsHtml += `Time: ${conv.time} | `;
+                if (conv.duration) detailsHtml += `Duration: ${conv.duration} | `;
+                if (conv.location) {
+                    // Truncate location if it's too long
+                    const location = conv.location.length > 100 
+                        ? conv.location.substring(0, 100) + '...' 
+                        : conv.location;
+                    detailsHtml += `Location: ${location} | `;
+                }
+                detailsHtml = detailsHtml.replace(/\|\s*$/, ''); // Remove trailing separator
+                detailsHtml += '</div>';
+                
+                // View button
+                const buttonHtml = `
+                    <a href="/conversation/${conv.id}" class="btn btn-sm btn-outline-primary mt-2">
+                        View Conversation
+                    </a>
+                `;
+                
+                listItem.innerHTML = `
+                    <div>
+                        ${sourceHtml}
+                        ${summaryHtml}
+                        ${detailsHtml}
+                        ${buttonHtml}
+                    </div>
+                `;
+                
+                conversationsList.appendChild(listItem);
+            });
+            
+            container.appendChild(hourCard);
+        }
+    }
+    
+    function navigateToDay(date) {
+        window.location.href = `/day/${date}`;
+    }
+    
+    function getPreviousDay(dateStr) {
+        const date = new Date(dateStr);
+        date.setDate(date.getDate() - 1);
+        return date.toISOString().split('T')[0];
+    }
+    
+    function getNextDay(dateStr) {
+        const date = new Date(dateStr);
+        date.setDate(date.getDate() + 1);
+        return date.toISOString().split('T')[0];
+    }
+    
+    document.getElementById('prev-day-btn').addEventListener('click', function() {
+        navigateToDay(getPreviousDay(currentDate));
+    });
+    
+    document.getElementById('next-day-btn').addEventListener('click', function() {
+        navigateToDay(getNextDay(currentDate));
+    });
+    
+    document.getElementById('today-btn').addEventListener('click', function() {
+        const today = new Date().toISOString().split('T')[0];
+        navigateToDay(today);
+    });
+    
+    // Load day data on page load
+    async function init() {
+        const dayData = await loadDayData(currentDate);
+        renderConversations(dayData);
+    }
+    
+    init();
+</script>
+{% endblock %}

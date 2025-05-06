@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-3">
+    <div class="col">
+        <h1>Conversation Details</h1>
+    </div>
+    <div class="col-auto">
+        <a href="javascript:history.back()" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Back
+        </a>
+    </div>
+</div>
+
+<div id="conversation-container">
+    <div class="d-flex justify-content-center my-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    const conversationId = "{{ conversation_id }}";
+    
+    async function loadConversationData(id) {
+        try {
+            const response = await axios.get(`/api/conversation/${id}`);
+            return response.data;
+        } catch (error) {
+            showAlert(`Error loading conversation: ${error.response?.data?.detail || error.message}`, 'danger');
+            return null;
+        }
+    }
+    
+    function renderConversation(conversation) {
+        const container = document.getElementById('conversation-container');
+        
+        if (!conversation) {
+            container.innerHTML = `
+                <div class="alert alert-danger">
+                    Could not load conversation data.
+                </div>
+            `;
+            return;
+        }
+        
+        // Format source display
+        const source = conversation.source.charAt(0).toUpperCase() + conversation.source.slice(1);
+        
+        // Format metadata
+        let metadataHtml = '<table class="table table-sm">';
+        
+        if (conversation.time) {
+            metadataHtml += `<tr>
+                <th scope="row">Time</th>
+                <td>${conversation.time}</td>
+            </tr>`;
+        }
+        
+        if (conversation.metadata.duration) {
+            const durationMinutes = Math.floor(conversation.metadata.duration / 60);
+            metadataHtml += `<tr>
+                <th scope="row">Duration</th>
+                <td>${durationMinutes} minutes</td>
+            </tr>`;
+        }
+        
+        if (conversation.metadata.location) {
+            metadataHtml += `<tr>
+                <th scope="row">Location</th>
+                <td>${conversation.metadata.location}</td>
+            </tr>`;
+        }
+        
+        metadataHtml += '</table>';
+        
+        // Prepare transcript
+        const transcript = conversation.text || 'No transcript available';
+        
+        // Construct the conversation display
+        container.innerHTML = `
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">
+                        <span class="source-tag ${conversation.source}">${source}</span>
+                        ${conversation.time}
+                    </h5>
+                    <div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" id="copy-transcript-btn">
+                            <i class="bi bi-clipboard"></i> Copy Transcript
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Summary</h4>
+                    <p class="card-text">${conversation.summary || 'No summary available'}</p>
+                    
+                    <h4 class="card-title mt-4 mb-3">Details</h4>
+                    ${metadataHtml}
+                    
+                    <h4 class="card-title mt-4 mb-3">Transcript</h4>
+                    <div class="bg-light p-3 rounded" style="max-height: 500px; overflow-y: auto;">
+                        <pre style="white-space: pre-wrap;">${transcript}</pre>
+                    </div>
+                </div>
+                <div class="card-footer text-muted">
+                    <button type="button" class="btn btn-sm btn-outline-primary" id="generate-markdown-btn">
+                        <i class="bi bi-markdown"></i> Generate Markdown
+                    </button>
+                </div>
+            </div>
+        `;
+        
+        // Set up the copy transcript button
+        document.getElementById('copy-transcript-btn').addEventListener('click', function() {
+            navigator.clipboard.writeText(transcript)
+                .then(() => showAlert('Transcript copied to clipboard!', 'success'))
+                .catch(err => showAlert('Failed to copy transcript', 'danger'));
+        });
+        
+        // Set up generate markdown button
+        document.getElementById('generate-markdown-btn').addEventListener('click', async function() {
+            try {
+                const date = conversation.date;
+                if (!date) {
+                    showAlert('Unable to determine date from conversation', 'danger');
+                    return;
+                }
+                
+                showAlert('Generating markdown file...', 'info');
+                
+                const response = await axios.post('/api/markdown/generate', null, {
+                    params: { date: date, force: true }
+                });
+                
+                if (response.data.files && response.data.files.length > 0) {
+                    const file = response.data.files[0];
+                    showAlert(`Generated markdown file: ${file.file}`, 'success');
+                } else {
+                    showAlert('Failed to generate markdown file', 'danger');
+                }
+            } catch (error) {
+                showAlert(`Error generating markdown: ${error.response?.data?.detail || error.message}`, 'danger');
+            }
+        });
+    }
+    
+    // Load conversation data on page load
+    async function init() {
+        const conversation = await loadConversationData(conversationId);
+        renderConversation(conversation);
+    }
+    
+    init();
+</script>
+{% endblock %}

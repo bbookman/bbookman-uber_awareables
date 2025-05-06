@@ -1,0 +1,7 @@
+python-dotenv
+pytz
+requests
+tzlocal
+beeai
+faiss-cpu
+sentence_transformers
