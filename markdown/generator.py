@@ -393,66 +393,57 @@ class MarkdownGenerator:
         content += "## Table of Contents\n\n"
         
         for i, conv in enumerate(conversations):
-            timestamp = conv.get("timestamp", "")
-            time_str = self._format_timestamp(timestamp)
+            # Use short_summary if available, otherwise fall back to regular summary
+            short_summary = conv.get("short_summary", "")
+            if not short_summary:
+                summary = conv.get("summary", "No summary available")
+                # Clean up summary by removing prefixes
+                if summary.startswith("### Summary:"):
+                    summary = summary[len("### Summary:"):].strip()
+                elif summary.startswith("**Summary:**"):
+                    summary = summary[len("**Summary:**"):].strip()
+                
+                # Limit length for regular summaries
+                if summary and len(summary) > 100:
+                    short_summary = summary[:97] + "..."
+                else:
+                    short_summary = summary
             
-            title = f"Conversation {i+1} - {time_str}"
-            summary = conv.get("summary", "No summary available")
-            
-            # Clean up summary by removing "### Summary:" prefix
-            if summary.startswith("### Summary:"):
-                summary = summary[len("### Summary:"):].strip()
-            elif summary.startswith("**Summary:**"):
-                summary = summary[len("**Summary:**"):].strip()
-            
-            if summary and len(summary) > 100:
-                summary = summary[:97] + "..."
-            
+            # Create link to the conversation
             link = f"#conversation-{i+1}"
-            content += f"- [{title}]({link}): {summary}\n"
+            
+            # Add the entry to the table of contents (without time)
+            content += f"- [{short_summary}]({link})\n"
         
         content += "\n---\n\n"
         
         # Add each conversation
         for i, conv in enumerate(conversations):
-            timestamp = conv.get("timestamp", "")
-            timestamp_formatted = self._format_timestamp(timestamp)
-            
             # Add anchor for TOC
             content += f"<a id='conversation-{i+1}'></a>\n"
             
-            # Add conversation header
-            content += f"## Conversation {i+1} - {timestamp_formatted}\n\n"
-            
-            # Add summary if available
-            if conv.get("summary"):
-                content += f"**Summary:** {conv.get('summary')}\n\n"
-            
-            # Add metadata
-            content += "**Details:**\n\n"
-            content += f"- **Time**: {timestamp_formatted}\n"
-            
-            # For Limitless, use 'duration' from metadata
-            if source.lower() == "limitless" and conv.get("metadata", {}).get("duration"):
-                duration_min = int(conv.get("metadata", {}).get("duration", 0) / 60)
-                content += f"- **Duration**: {duration_min} minutes\n"
-            
-            # For Bee, use end_time - start_time if available
-            elif source.lower() == "bee" and conv.get("metadata", {}).get("startTime") and conv.get("metadata", {}).get("endTime"):
-                try:
-                    start_time = datetime.fromisoformat(conv.get("metadata", {}).get("startTime").replace('Z', '+00:00'))
-                    end_time = datetime.fromisoformat(conv.get("metadata", {}).get("endTime").replace('Z', '+00:00'))
-                    duration = end_time - start_time
-                    duration_min = int(duration.total_seconds() / 60)
-                    content += f"- **Duration**: {duration_min} minutes\n"
-                except Exception as e:
-                    print(f"Error calculating duration: {e}")
+            # Get the short summary or regular summary for the heading
+            short_summary = conv.get("short_summary", "")
+            if not short_summary:
+                summary = conv.get("summary", f"Conversation {i+1}")
+                if summary.startswith("### Summary:"):
+                    summary = summary[len("### Summary:"):].strip()
+                elif summary.startswith("**Summary:**"):
+                    summary = summary[len("**Summary:**"):].strip()
                 
-            if conv.get("metadata", {}).get("location"):
-                location = str(conv.get("metadata", {}).get("location", ""))
-                content += f"- **Location**: {location}\n"
+                # Use first part of summary if too long
+                if summary and len(summary) > 70:
+                    short_summary = summary[:67] + "..."
+                else:
+                    short_summary = summary
             
-            content += "\n"
+            # Add conversation header with just the short summary (no time)
+            content += f"## {short_summary}\n\n"
+            
+            # Add full summary if available and different from short summary
+            full_summary = conv.get("summary", "")
+            if full_summary and full_summary != short_summary:
+                content += f"**Summary:** {full_summary}\n\n"
             
             # Add transcript if available
             text = conv.get("text", "")
