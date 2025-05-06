@@ -398,6 +398,13 @@ class MarkdownGenerator:
             
             title = f"Conversation {i+1} - {time_str}"
             summary = conv.get("summary", "No summary available")
+            
+            # Clean up summary by removing "### Summary:" prefix
+            if summary.startswith("### Summary:"):
+                summary = summary[len("### Summary:"):].strip()
+            elif summary.startswith("**Summary:**"):
+                summary = summary[len("**Summary:**"):].strip()
+            
             if summary and len(summary) > 100:
                 summary = summary[:97] + "..."
             
