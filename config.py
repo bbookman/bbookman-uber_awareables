@@ -23,6 +23,13 @@ BEE_OUTPUT_TARGET = os.getenv("BEE_OUTPUT_TARGET", "./bee")
 VECTOR_DB_PATH = os.getenv("VECTOR_DB_PATH", "./vector_db")
 MARKDOWN_OUTPUT_PATH = os.getenv("MARKDOWN_OUTPUT_PATH", "./markdown_output")
 
+# Markdown output targets
+BEE_MD_TARGET = os.getenv("BEE_MD_TARGET", "./md/bee")
+LIMITLESS_MD_TARGET = os.getenv("LIMITLESS_MD_TARGET", "./md/limitless")
+
+# Timezone configuration
+TIMEZONE = os.getenv("TIMEZONE", "America/New_York")
+
 # Ollama configuration
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "mistral")

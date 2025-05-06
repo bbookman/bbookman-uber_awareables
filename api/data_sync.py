@@ -32,13 +32,13 @@ class DataSyncer:
         if not self.bee_api_key:
             print("Warning: Bee API key not found. Bee data will not be fetched.")
     
-    def fetch_limitless_data(self, date=None, limit=50):
+    def fetch_limitless_data(self, date=None, limit=None):
         """
         Fetch data from Limitless API.
         
         Args:
             date: Date string in ISO format (YYYY-MM-DD)
-            limit: Maximum number of lifelogs to fetch
+            limit: Maximum number of lifelogs to fetch (None means fetch all)
             
         Returns:
             List of lifelogs
@@ -47,19 +47,20 @@ class DataSyncer:
             return []
             
         try:
-            print(f"Fetching Limitless data for date: {date}")
+            limit_str = str(limit) if limit is not None else "ALL"
+            print(f"Fetching Limitless data for date: {date}, limit: {limit_str}")
             return get_lifelogs(api_key=self.limitless_api_key, date=date, limit=limit)
         except Exception as e:
             print(f"Error fetching Limitless data: {str(e)}")
             return []
     
-    def fetch_bee_data(self, date=None, limit=50):
+    def fetch_bee_data(self, date=None, limit=None):
         """
         Fetch data from Bee API.
         
         Args:
             date: Date string in ISO format (YYYY-MM-DD) - Note: Not directly used as Bee API doesn't support date filtering
-            limit: Maximum number of conversations to fetch
+            limit: Maximum number of conversations to fetch (None means fetch all)
             
         Returns:
             Dictionary containing conversations and their detailed data
@@ -68,9 +69,10 @@ class DataSyncer:
             return {}
             
         try:
-            # Note: Bee API doesn't support date filtering directly through the API
-            # We'll need to filter the results afterward if date filtering is needed
-            print(f"Fetching Bee data (will filter by date: {date} later if needed)")
+            limit_str = str(limit) if limit is not None else "ALL"
+            print(f"Fetching Bee data (will filter by date: {date} later if needed), limit: {limit_str}")
+            
+            # Initial fetch
             conversations = get_conversations(api_key=self.bee_api_key, limit=limit, page=1)
             
             # Filter conversations by date if specified
@@ -101,7 +103,7 @@ class DataSyncer:
             print(f"Error fetching Bee data: {str(e)}")
             return {}
     
-    def synchronize_data(self, start_date=None, end_date=None, days=1, limit_per_day=50):
+    def synchronize_data(self, start_date=None, end_date=None, days=1, limit_per_day=None):
         """
         Synchronize data from both APIs for a date range.
         
@@ -109,7 +111,7 @@ class DataSyncer:
             start_date: Start date in ISO format (YYYY-MM-DD), defaults to today
             end_date: End date in ISO format (YYYY-MM-DD), defaults to today
             days: Number of days to synchronize if start_date is not provided
-            limit_per_day: Maximum number of records to fetch per day per API
+            limit_per_day: Maximum number of records to fetch per day per API (None means all)
             
         Returns:
             Dictionary containing unified data from both APIs
@@ -227,7 +229,7 @@ class DataSyncer:
 if __name__ == "__main__":
     syncer = DataSyncer()
     # Fetch data for the last 3 days
-    data = syncer.synchronize_data(days=3)
+    data = syncer.synchronize_data(days=3, limit_per_day=None)  # None means fetch all available data
     
     # Prepare for vector storage
     documents = DataSyncer.combine_data_for_vector_storage(data)
