@@ -7,31 +7,23 @@ from beeai import Bee
 from config import BEE_API_KEY, JSON_TEST
 from debug_json import save_json_response
 
-async def get_conversations_async(api_key=BEE_API_KEY, limit=50, date=None, direction="asc"):
+async def get_conversations_async(api_key=BEE_API_KEY, limit=50, page=1):
     """
     Asynchronously fetch conversations from the Bee API using the beeai library.
     
     Args:
         api_key: Bee API key
-        limit: Maximum number of conversations to fetch
-        date: Date to filter conversations by (ISO format)
-        direction: Sort direction ('asc' or 'desc')
+        limit: Maximum number of conversations per page
+        page: Page number for pagination
     
     Returns:
         List of conversation objects
     """
     bee = Bee(api_key)
     
-    params = {}
-    if date:
-        params["date"] = date
-    if direction:
-        params["direction"] = direction
-    if limit:
-        params["limit"] = limit
-        
     try:
-        response = await bee.get_conversations("me", **params)
+        # The beeai library only supports page and limit parameters
+        response = await bee.get_conversations("me", page=page, limit=limit)
         
         # Save the response to a JSON file if JSON_TEST is enabled
         save_json_response(response, "/v1/me/conversations", JSON_TEST)
@@ -66,11 +58,14 @@ async def get_conversation_details_async(conversation_id, api_key=BEE_API_KEY):
         return {}
 
 # Synchronous wrapper functions for compatibility with existing code
-def get_conversations(api_key=BEE_API_KEY, limit=50, date=None, direction="asc", **kwargs):
+def get_conversations(api_key=BEE_API_KEY, limit=50, page=1, **kwargs):
     """
     Synchronous wrapper for get_conversations_async.
+    
+    Note: Other parameters like date and direction are ignored since the beeai 
+    library doesn't support them directly.
     """
-    return asyncio.run(get_conversations_async(api_key, limit, date, direction))
+    return asyncio.run(get_conversations_async(api_key=api_key, limit=limit, page=page))
 
 def get_conversation_details(conversation_id, api_key=BEE_API_KEY):
     """

@@ -1,0 +1,248 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-3">
+    <div class="col">
+        <h1>Search Conversations</h1>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-md-8 offset-md-2">
+        <form id="search-form" class="d-flex">
+            <input class="form-control form-control-lg me-2" type="search" name="query" id="search-query" placeholder="Search conversations..." aria-label="Search" value="{{ query }}">
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Filters</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="date-filter" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date-filter">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="source-filter" class="form-label">Source</label>
+                            <select class="form-select" id="source-filter">
+                                <option value="">All Sources</option>
+                                <option value="limitless">Limitless</option>
+                                <option value="bee">Bee</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="results-limit" class="form-label">Results Limit</label>
+                            <select class="form-select" id="results-limit">
+                                <option value="10">10 results</option>
+                                <option value="25">25 results</option>
+                                <option value="50">50 results</option>
+                                <option value="100">100 results</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="search-results">
+    {% if query %}
+    <div class="d-flex justify-content-center my-5">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Store initial query
+    let currentQuery = "{{ query }}";
+    
+    async function performSearch(query, options = {}) {
+        if (!query.trim()) return null;
+        
+        try {
+            const params = {
+                query: query,
+                limit: options.limit || 10
+            };
+            
+            if (options.date) params.date = options.date;
+            if (options.source) params.source = options.source;
+            
+            const response = await axios.get('/api/search', { params });
+            return response.data;
+        } catch (error) {
+            showAlert(`Search error: ${error.response?.data?.detail || error.message}`, 'danger');
+            return null;
+        }
+    }
+    
+    function renderSearchResults(results) {
+        const container = document.getElementById('search-results');
+        container.innerHTML = '';
+        
+        if (!results) {
+            return;
+        }
+        
+        // Result count header
+        container.innerHTML = `
+            <div class="row mb-3">
+                <div class="col-md-8 offset-md-2">
+                    <div class="alert ${results.result_count > 0 ? 'alert-info' : 'alert-warning'}">
+                        ${results.result_count > 0 
+                            ? `Found ${results.result_count} results for "${results.query}"`
+                            : `No results found for "${results.query}"`}
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        if (results.result_count === 0) return;
+        
+        // Results list
+        const resultsList = document.createElement('div');
+        resultsList.className = 'row';
+        
+        // Create a card for each result
+        results.results.forEach(result => {
+            const resultCol = document.createElement('div');
+            resultCol.className = 'col-md-8 offset-md-2 mb-3';
+            
+            const resultCard = document.createElement('div');
+            resultCard.className = 'card';
+            
+            // Format header with date, source, and relevance score
+            const source = result.source.charAt(0).toUpperCase() + result.source.slice(1);
+            const header = document.createElement('div');
+            header.className = 'card-header d-flex justify-content-between';
+            header.innerHTML = `
+                <div>
+                    <span class="source-tag ${result.source}">${source}</span>
+                    <span class="text-muted">${result.date} ${result.time || ''}</span>
+                </div>
+                <div>
+                    <span class="badge bg-success">${result.score}% match</span>
+                </div>
+            `;
+            
+            // Format body with summary and snippet
+            const body = document.createElement('div');
+            body.className = 'card-body';
+            
+            // Summary
+            if (result.summary) {
+                const summary = document.createElement('p');
+                summary.className = 'card-text';
+                summary.textContent = result.summary;
+                body.appendChild(summary);
+            }
+            
+            // Snippet with highlighted query terms
+            if (result.snippet) {
+                const snippetContainer = document.createElement('div');
+                snippetContainer.className = 'bg-light p-2 rounded mt-2';
+                
+                const snippet = document.createElement('p');
+                snippet.className = 'card-text small mb-0';
+                
+                // Highlight query terms in the snippet
+                let highlightedSnippet = result.snippet;
+                const queryTerms = results.query.split(' ')
+                    .filter(term => term.length > 2)
+                    .map(term => term.toLowerCase());
+                
+                queryTerms.forEach(term => {
+                    const regex = new RegExp(term, 'gi');
+                    highlightedSnippet = highlightedSnippet.replace(
+                        regex, 
+                        match => `<span class="search-highlight">${match}</span>`
+                    );
+                });
+                
+                snippet.innerHTML = highlightedSnippet;
+                snippetContainer.appendChild(snippet);
+                body.appendChild(snippetContainer);
+            }
+            
+            // Footer with view button
+            const footer = document.createElement('div');
+            footer.className = 'card-footer';
+            footer.innerHTML = `
+                <a href="/conversation/${result.id}" class="btn btn-primary btn-sm">View Conversation</a>
+            `;
+            
+            // Assemble card
+            resultCard.appendChild(header);
+            resultCard.appendChild(body);
+            resultCard.appendChild(footer);
+            resultCol.appendChild(resultCard);
+            resultsList.appendChild(resultCol);
+        });
+        
+        container.appendChild(resultsList);
+    }
+    
+    // Set up event listeners
+    document.getElementById('search-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const query = document.getElementById('search-query').value;
+        const date = document.getElementById('date-filter').value;
+        const source = document.getElementById('source-filter').value;
+        const limit = document.getElementById('results-limit').value;
+        
+        currentQuery = query;
+        
+        // Update URL to reflect search parameters
+        const params = new URLSearchParams();
+        if (query) params.append('query', query);
+        
+        const newUrl = `${window.location.pathname}?${params.toString()}`;
+        window.history.pushState({}, '', newUrl);
+        
+        // Perform search
+        performSearch(query, { date, source, limit })
+            .then(renderSearchResults);
+    });
+    
+    // Filter change listeners
+    ['date-filter', 'source-filter', 'results-limit'].forEach(id => {
+        document.getElementById(id).addEventListener('change', function() {
+            if (!currentQuery.trim()) return;
+            
+            const query = currentQuery;
+            const date = document.getElementById('date-filter').value;
+            const source = document.getElementById('source-filter').value;
+            const limit = document.getElementById('results-limit').value;
+            
+            performSearch(query, { date, source, limit })
+                .then(renderSearchResults);
+        });
+    });
+    
+    // Initial search if query is provided
+    if (currentQuery.trim()) {
+        performSearch(currentQuery)
+            .then(renderSearchResults);
+    }
+</script>
+{% endblock %}

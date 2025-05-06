@@ -58,7 +58,7 @@ class DataSyncer:
         Fetch data from Bee API.
         
         Args:
-            date: Date string in ISO format (YYYY-MM-DD)
+            date: Date string in ISO format (YYYY-MM-DD) - Note: Not directly used as Bee API doesn't support date filtering
             limit: Maximum number of conversations to fetch
             
         Returns:
@@ -68,8 +68,21 @@ class DataSyncer:
             return {}
             
         try:
-            print(f"Fetching Bee data for date: {date}")
-            conversations = get_conversations(api_key=self.bee_api_key, date=date, limit=limit)
+            # Note: Bee API doesn't support date filtering directly through the API
+            # We'll need to filter the results afterward if date filtering is needed
+            print(f"Fetching Bee data (will filter by date: {date} later if needed)")
+            conversations = get_conversations(api_key=self.bee_api_key, limit=limit, page=1)
+            
+            # Filter conversations by date if specified
+            if date and conversations:
+                filtered_conversations = []
+                for conv in conversations:
+                    # Check if start_time contains the specified date
+                    start_time = conv.get('start_time', '')
+                    if start_time and start_time.startswith(date):
+                        filtered_conversations.append(conv)
+                conversations = filtered_conversations
+                print(f"Filtered conversations by date {date}: {len(conversations)} results")
             
             # Fetch detailed data for each conversation
             conversation_details = {}

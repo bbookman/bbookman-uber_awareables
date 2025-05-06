@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mb-3">
+    <div class="col">
+        <h1>Conversation Archive</h1>
+    </div>
+    <div class="col-auto">
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-outline-secondary" id="prev-month-btn">
+                <i class="bi bi-chevron-left"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" id="current-month-btn">
+                Current Month
+            </button>
+            <button type="button" class="btn btn-outline-secondary" id="next-month-btn">
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<h2 id="calendar-title"></h2>
+
+<div class="row mb-3">
+    <div class="col">
+        <div class="row row-cols-7 text-center fw-bold">
+            <div class="col">Sun</div>
+            <div class="col">Mon</div>
+            <div class="col">Tue</div>
+            <div class="col">Wed</div>
+            <div class="col">Thu</div>
+            <div class="col">Fri</div>
+            <div class="col">Sat</div>
+        </div>
+        <div id="calendar-grid" class="row row-cols-7">
+            <!-- Calendar days will be rendered here -->
+            <div class="col">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100px">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Calendar data and state
+    let currentYear = new Date().getFullYear();
+    let currentMonth = new Date().getMonth() + 1; // JS months are 0-indexed
+
+    async function loadCalendarData(year, month) {
+        try {
+            const response = await axios.get(`/api/calendar`, {
+                params: { year, month }
+            });
+            return response.data;
+        } catch (error) {
+            showAlert(`Error loading calendar data: ${error.message}`, 'danger');
+            return null;
+        }
+    }
+
+    function renderCalendar(calendarData) {
+        if (!calendarData) return;
+
+        // Update calendar title
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+                           "July", "August", "September", "October", "November", "December"];
+        document.getElementById('calendar-title').textContent = `${monthNames[calendarData.month-1]} ${calendarData.year}`;
+
+        // Clear existing calendar
+        const calendarGrid = document.getElementById('calendar-grid');
+        calendarGrid.innerHTML = '';
+
+        // Calculate first day of the month
+        const firstDayOfMonth = new Date(calendarData.year, calendarData.month - 1, 1).getDay();
+
+        // Add empty cells for days before the first day of the month
+        for (let i = 0; i < firstDayOfMonth; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'col';
+            cell.innerHTML = '<div class="calendar-day"></div>';
+            calendarGrid.appendChild(cell);
+        }
+
+        // Add cells for each day of the month
+        calendarData.days.forEach(day => {
+            const cell = document.createElement('div');
+            cell.className = 'col';
+            
+            const dayDiv = document.createElement('div');
+            dayDiv.className = 'calendar-day';
+            if (day.has_data) {
+                dayDiv.classList.add('has-data');
+                dayDiv.addEventListener('click', () => {
+                    window.location.href = `/day/${day.date}`;
+                });
+            }
+            
+            const dayNumber = document.createElement('div');
+            dayNumber.className = 'day-number';
+            dayNumber.textContent = day.day;
+            
+            dayDiv.appendChild(dayNumber);
+            
+            if (day.count > 0) {
+                const countBadge = document.createElement('div');
+                countBadge.className = 'conversation-count';
+                countBadge.textContent = day.count;
+                dayDiv.appendChild(countBadge);
+            }
+            
+            cell.appendChild(dayDiv);
+            calendarGrid.appendChild(cell);
+        });
+    }
+
+    async function updateCalendar() {
+        const calendarData = await loadCalendarData(currentYear, currentMonth);
+        renderCalendar(calendarData);
+    }
+
+    document.getElementById('prev-month-btn').addEventListener('click', function() {
+        if (currentMonth === 1) {
+            currentYear--;
+            currentMonth = 12;
+        } else {
+            currentMonth--;
+        }
+        updateCalendar();
+    });
+
+    document.getElementById('next-month-btn').addEventListener('click', function() {
+        if (currentMonth === 12) {
+            currentYear++;
+            currentMonth = 1;
+        } else {
+            currentMonth++;
+        }
+        updateCalendar();
+    });
+
+    document.getElementById('current-month-btn').addEventListener('click', function() {
+        currentYear = new Date().getFullYear();
+        currentMonth = new Date().getMonth() + 1;
+        updateCalendar();
+    });
+
+    // Initial calendar load
+    updateCalendar();
+</script>
+{% endblock %}
