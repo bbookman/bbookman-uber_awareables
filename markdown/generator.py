@@ -5,6 +5,7 @@ from typing import List, Dict, Any, Optional
 from datetime import datetime, timedelta
 import calendar
 import pytz
+import json
 
 # Add parent directory to path so we can import from the root
 sys.path.append(str(Path(__file__).parent.parent))
@@ -19,16 +20,18 @@ class MarkdownGenerator:
     Handles both Bee and Limitless data with separate output directories.
     """
     
-    def __init__(self, limitless_output_path=LIMITLESS_MD_TARGET, bee_output_path=BEE_MD_TARGET):
+    def __init__(self, limitless_output_path=LIMITLESS_MD_TARGET, bee_output_path=BEE_MD_TARGET, debug=False):
         """
         Initialize the markdown generator.
         
         Args:
             limitless_output_path: Base directory for Limitless markdown files
             bee_output_path: Base directory for Bee markdown files
+            debug: Whether to print debug information
         """
         self.limitless_output_path = Path(limitless_output_path)
         self.bee_output_path = Path(bee_output_path)
+        self.debug = debug
         
         # Create output directories if they don't exist
         self.limitless_output_path.mkdir(exist_ok=True, parents=True)
@@ -43,7 +46,16 @@ class MarkdownGenerator:
         except pytz.exceptions.UnknownTimeZoneError:
             print(f"Warning: Unknown timezone '{TIMEZONE}', falling back to America/New_York")
             self.timezone = pytz.timezone("America/New_York")
-    
+            
+        if self.debug:
+            print(f"Vector store has {len(self.vector_store.documents)} documents")
+            stats = self.vector_store.get_stats()
+            print(f"- Bee: {stats.get('sources', {}).get('bee', 0)} documents")
+            print(f"- Limitless: {stats.get('sources', {}).get('limitless', 0)} documents")
+            dates = sorted(list(stats.get('dates', {}).keys()))
+            if dates:
+                print(f"- Date range: {dates[0]} to {dates[-1]}")
+
     def _get_month_name(self, month_number):
         """
         Get the full month name for a month number.
@@ -160,6 +172,50 @@ class MarkdownGenerator:
         
         return results
     
+    def _get_conversations_by_date_source(self, date_str, source):
+        """
+        Get all conversations for a specific date and source using direct vector store access.
+        This is an alternative to using the search_conversations method which may not work correctly.
+        
+        Args:
+            date_str: Date in YYYY-MM-DD format
+            source: Data source ("limitless" or "bee")
+            
+        Returns:
+            List of conversation objects
+        """
+        # Debug output
+        if self.debug:
+            print(f"Getting conversations for date: {date_str}, source: {source}")
+            
+        # Collect matching conversations
+        results = []
+        
+        # Iterate through all documents in the vector store
+        for doc in self.vector_store.documents:
+            # Check if the document is from the requested source
+            if doc.get("source") != source.lower():
+                continue
+                
+            # Check if the document's date matches
+            doc_date = doc.get("date")
+            if doc_date != date_str:
+                continue
+                
+            # This document matches both source and date
+            results.append(doc)
+            
+        # Debug output
+        if self.debug:
+            print(f"Found {len(results)} conversations for {source} on {date_str}")
+            # Print brief details about each conversation
+            for i, conv in enumerate(results):
+                if i < 3:  # Only show first 3 conversations to avoid overwhelming output
+                    print(f"  {i+1}. ID: {conv.get('id', 'unknown')}, " 
+                        f"Time: {conv.get('timestamp', 'unknown')}")
+        
+        return results
+
     def _generate_source_markdown(self, date_obj, source, force_regenerate=False):
         """
         Generate a markdown file for a specific date and source.
@@ -191,21 +247,36 @@ class MarkdownGenerator:
                 "date": date_str,
                 "source": source,
                 "file": str(output_file),
-                "status": "skipped"
+                "status": "skipped",
+                "conversations_count": 0
             }
         
-        # Get conversations for this date and source
-        results = self.data_ingestion.search_conversations(
-            query="",
-            k=100,
-            date=date_str,
-            source=source
-        )
+        # Try multiple methods to find conversations
+        results = self._get_conversations_by_date_source(date_str, source)
         
-        # If no conversations found, return None
+        # If no conversations found with direct access, try the search method as fallback
         if not results:
-            print(f"No {source} conversations found for date {date_str}")
-            return None
+            if self.debug:
+                print(f"No conversations found with direct access, trying search...")
+            
+            results = self.data_ingestion.search_conversations(
+                query="",
+                k=100,
+                date=date_str,
+                source=source
+            )
+        
+        # If still no conversations found, return a result showing 0 conversations
+        if not results:
+            if self.debug:
+                print(f"No {source} conversations found for date {date_str}")
+            return {
+                "date": date_str,
+                "source": source,
+                "file": None,
+                "status": "no_conversations",
+                "conversations_count": 0
+            }
         
         # Sort results by timestamp
         results.sort(key=lambda x: x.get("timestamp", ""))
@@ -251,6 +322,9 @@ class MarkdownGenerator:
                 
         if not end_date:
             end_date = now.strftime('%Y-%m-%d')
+        
+        # Print date range being processed
+        print(f"Generating markdown for date range: {start_date} to {end_date}")    
             
         # Parse dates
         start = datetime.strptime(start_date, '%Y-%m-%d')
@@ -261,8 +335,32 @@ class MarkdownGenerator:
         # Iterate through each day in the date range
         current_date = start
         while current_date <= end:
+            date_str = current_date.strftime('%Y-%m-%d')
+            print(f"\nProcessing date: {date_str}")
+            
             # Generate markdown for this date
-            day_results = self.generate_daily_markdown(current_date.strftime('%Y-%m-%d'), force_regenerate)
+            day_results = self.generate_daily_markdown(date_str, force_regenerate)
+            
+            # If no results were generated, create "no conversation" results for reporting
+            if not day_results:
+                bee_result = {
+                    "date": date_str,
+                    "source": "bee",
+                    "file": None,
+                    "status": "no_conversations",
+                    "conversations_count": 0
+                }
+                
+                limitless_result = {
+                    "date": date_str,
+                    "source": "limitless",
+                    "file": None,
+                    "status": "no_conversations",
+                    "conversations_count": 0
+                }
+                
+                day_results = [bee_result, limitless_result]
+            
             results.extend(day_results)
             
             # Move to next day

@@ -28,6 +28,12 @@ def parse_arguments():
     )
     
     parser.add_argument(
+        '--date',
+        type=str,
+        help='Specific date in YYYY-MM-DD format to generate markdown for'
+    )
+    
+    parser.add_argument(
         '--start-date', 
         type=str, 
         help='Start date in YYYY-MM-DD format (default: today minus days-1)'
@@ -67,6 +73,12 @@ def parse_arguments():
         help=f'Output path for Bee markdown files (default: {BEE_MD_TARGET})'
     )
     
+    parser.add_argument(
+        '--debug',
+        action='store_true',
+        help='Print debug information about conversations found'
+    )
+    
     return parser.parse_args()
 
 def main():
@@ -76,7 +88,8 @@ def main():
     # Initialize markdown generator
     generator = MarkdownGenerator(
         limitless_output_path=args.limitless_path,
-        bee_output_path=args.bee_path
+        bee_output_path=args.bee_path,
+        debug=args.debug
     )
     
     # Get current time in the configured timezone
@@ -86,8 +99,9 @@ def main():
         tz_name = now.strftime('%Z')
     except Exception:
         tz_name = TIMEZONE
+        now = datetime.now()
     
-    print(f"Generating markdown files for the past {args.days} days")
+    print(f"Generating markdown files")
     print(f"Using timezone: {TIMEZONE} ({tz_name})")
     print(f"Current time: {now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
     print(f"Limitless output path: {args.limitless_path}")
@@ -95,7 +109,18 @@ def main():
     print(f"Force regenerate: {args.force}")
     
     # Generate markdown files
-    if args.source != 'all':
+    results = []
+    
+    # Handle --date parameter for a specific date
+    if args.date:
+        print(f"Generating markdown for specific date: {args.date}")
+        results = generator.generate_daily_markdown(
+            args.date,
+            force_regenerate=args.force
+        )
+    
+    # Handle specific source
+    elif args.source != 'all':
         # For a specific source, we'll override the generator method
         # to only generate markdown for that source
         if args.start_date and args.end_date:
