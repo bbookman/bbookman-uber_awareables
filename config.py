@@ -57,3 +57,7 @@ class Config:
 
     OLLAMA_BASE_URL = OLLAMA_BASE_URL
     OLLAMA_MODEL = OLLAMA_MODEL
+
+    def get_vector_store_path(self):
+        """Get the path to the vector store."""
+        return self.VECTOR_DB_PATH

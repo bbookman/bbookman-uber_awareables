@@ -341,3 +341,23 @@ class FAISSVectorStore:
             "vector_dim": self.vector_dim,
             "last_updated": datetime.now().isoformat()
         }
+    
+    def get_latest_document_date(self, source: str) -> str:
+        """Get the most recent date of documents from a specific source."""
+        latest_date = None
+        for doc in self.documents:
+            if doc.get('source') == source:
+                doc_date = doc.get('date')
+                if doc_date and (latest_date is None or doc_date > latest_date):
+                    latest_date = doc_date
+        return latest_date
+    
+    def get_document_ids(self, source: str) -> set:
+        """Get all document IDs from a specific source."""
+        return {doc.get('id') for doc in self.documents if doc.get('source') == source and doc.get('id')}
+    
+    def get_latest_documents(self, source: str, limit: int = 1) -> list:
+        """Get the most recent documents from a specific source."""
+        source_docs = [doc for doc in self.documents if doc.get('source') == source]
+        sorted_docs = sorted(source_docs, key=lambda x: x.get('date', ''), reverse=True)
+        return sorted_docs[:limit]

@@ -33,6 +33,11 @@ async def get_conversations_async(api_key=BEE_API_KEY, limit=None, page=1):
             save_json_response(response, f"/v1/me/conversations?page={current_page}", JSON_TEST)
             
             conversations = response.get("conversations", [])
+            if not conversations:
+                break
+                
+            # Sort conversations by start_time in descending order to ensure consistent order
+            conversations.sort(key=lambda x: x.get('start_time', ''), reverse=True)
             
             # Add conversations from this batch
             all_conversations.extend(conversations)
@@ -78,7 +83,7 @@ async def get_conversation_details_async(conversation_id, api_key=BEE_API_KEY):
         return {}
 
 # Synchronous wrapper functions for compatibility with existing code
-def get_conversations(api_key=BEE_API_KEY, limit=None, page=1, **kwargs):
+def get_conversations(api_key=BEE_API_KEY, limit=None, page=1, date=None, **kwargs):
     """
     Synchronous wrapper for get_conversations_async.
     
@@ -86,6 +91,7 @@ def get_conversations(api_key=BEE_API_KEY, limit=None, page=1, **kwargs):
         api_key: Bee API key
         limit: Maximum number of conversations to fetch (None means fetch all)
         page: Page number for pagination
+        date: Optional date filter in YYYY-MM-DD format
         
     Note: Other parameters like date and direction are ignored since the beeai 
     library doesn't support them directly.

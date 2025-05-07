@@ -76,10 +76,15 @@ def generate_markdown_files(docs_by_source_date):
     for source, dates in docs_by_source_date.items():
         for date_str, documents in dates.items():
             if not documents:
+                print(f"No documents found for {source} on {date_str}")
                 continue
                 
             # Parse date
-            date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+            try:
+                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+            except ValueError as e:
+                print(f"Error parsing date {date_str}: {e}")
+                continue
             
             # Choose output directory based on source
             if source.lower() == "bee":
@@ -96,7 +101,13 @@ def generate_markdown_files(docs_by_source_date):
             month_name = calendar.month_name[month]
             year_dir = output_dir / f"{year}"
             month_dir = year_dir / f"{month:02d}-{month_name}"
-            month_dir.mkdir(exist_ok=True, parents=True)
+            
+            try:
+                year_dir.mkdir(exist_ok=True, parents=True)
+                month_dir.mkdir(exist_ok=True, parents=True)
+            except Exception as e:
+                print(f"Error creating directories for {source} on {date_str}: {e}")
+                continue
             
             # Create filename
             filename = f"{month_name}-{date_obj.day:02d}-{year}.md"
@@ -105,29 +116,50 @@ def generate_markdown_files(docs_by_source_date):
             # Sort conversations by timestamp
             documents.sort(key=lambda x: x.get("timestamp", ""))
             
-            # Generate markdown content
-            content = generate_markdown_content(date_obj, documents, source)
-            
-            # Write to file
-            with open(output_file, 'w') as f:
-                f.write(content)
-            
-            print(f"Generated markdown for {source} on {date_str} ({len(documents)} conversations)")
-            print(f"  File: {output_file}")
-            
-            # Track result
-            results.append({
-                "date": date_str,
-                "source": source,
-                "conversations_count": len(documents),
-                "file": str(output_file)
-            })
+            try:
+                # Generate markdown content
+                content = generate_markdown_content(date_obj, documents, source)
+                
+                # Write to file
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                print(f"Generated markdown for {source} on {date_str} ({len(documents)} conversations)")
+                print(f"  File: {output_file}")
+                
+                # Track result
+                results.append({
+                    "date": date_str,
+                    "source": source,
+                    "conversations_count": len(documents),
+                    "file": str(output_file),
+                    "status": "success"
+                })
+            except Exception as e:
+                print(f"Error generating markdown for {source} on {date_str}: {e}")
+                results.append({
+                    "date": date_str,
+                    "source": source,
+                    "conversations_count": len(documents),
+                    "file": str(output_file),
+                    "status": "error",
+                    "error": str(e)
+                })
     
     # Print summary
-    print(f"\nGenerated {len(results)} markdown files in total:")
+    success_count = len([r for r in results if r["status"] == "success"])
+    error_count = len([r for r in results if r["status"] == "error"])
+    print(f"\nMarkdown generation complete:")
+    print(f"- Successfully generated: {success_count} files")
+    if error_count > 0:
+        print(f"- Failed to generate: {error_count} files")
+    
     for result in results:
-        print(f"- {result['date']}: {result['source']} ({result['conversations_count']} conversations)")
+        status = "✓" if result["status"] == "success" else "✗"
+        print(f"{status} {result['date']}: {result['source']} ({result['conversations_count']} conversations)")
         print(f"  File: {result['file']}")
+        if result["status"] == "error":
+            print(f"  Error: {result['error']}")
     
     return results
 
