@@ -125,7 +125,31 @@ class FAISSVectorStore:
         
         return len(documents)
     
-    def search(self, query: str, k: int = 5, filter_fn=None) -> List[Dict[str, Any]]:
+    def add_texts(self, documents: List[Dict[str, Any]], namespace: str = None) -> int:
+        """
+        Add documents to the vector store with optional namespace.
+        
+        Args:
+            documents: List of document dictionaries
+            namespace: Optional namespace to categorize documents
+            
+        Returns:
+            Number of documents added
+        """
+        if not documents:
+            return 0
+            
+        # Add namespace to document metadata if provided
+        if namespace:
+            for doc in documents:
+                if 'metadata' not in doc:
+                    doc['metadata'] = {}
+                doc['metadata']['namespace'] = namespace
+        
+        # Continue with adding documents to the store
+        return self.add_documents(documents)
+    
+    def search(self, query: str, k: int = 5, filter_fn=None, namespace: str = None) -> List[Dict[str, Any]]:
         """
         Search for documents similar to the query.
         
@@ -133,12 +157,29 @@ class FAISSVectorStore:
             query: Query string
             k: Number of results to return
             filter_fn: Optional function to filter results
+            namespace: Optional namespace to search within
             
         Returns:
             List of document dictionaries with similarity scores
         """
         if not query or self.index.ntotal == 0:
             return []
+            
+        # Create a combined filter function if namespace is provided
+        if namespace:
+            original_filter = filter_fn
+            
+            def namespace_filter(doc):
+                # Check if the document belongs to the specified namespace
+                doc_namespace = doc.get('metadata', {}).get('namespace')
+                namespace_match = doc_namespace == namespace
+                
+                # Apply the original filter if it exists
+                if original_filter:
+                    return namespace_match and original_filter(doc)
+                return namespace_match
+                
+            filter_fn = namespace_filter
             
         # Generate query embedding
         query_embedding = self.model.encode([query])

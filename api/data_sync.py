@@ -14,6 +14,7 @@ from config import (
 )
 from api.limitless_api import get_lifelogs
 from api.bee_api import get_conversations, get_conversation_details
+from storage.vector_store import FAISSVectorStore  # Changed from api.vector_store import VectorStore
 
 class DataSyncer:
     """
@@ -323,8 +324,8 @@ project_root = os.path.dirname(script_dir)
 sys.path.append(project_root)
 
 from api.data_sync import DataSyncer
-from api.vector_store import VectorStore
-from api.config import Config
+from storage.vector_store import FAISSVectorStore  # Corrected import
+from config import Config  # Corrected import to reference the root directory
 from api.bee_api import get_conversations, get_conversation_details
 
 def rebuild_vector_store():
@@ -340,7 +341,7 @@ def rebuild_vector_store():
     
     # Step 2: Initialize a new vector store
     print("Initializing new vector store")
-    vector_store = VectorStore()
+    vector_store = FAISSVectorStore()
     
     # Step 3: Create a DataSyncer instance
     data_syncer = DataSyncer()
