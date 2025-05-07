@@ -368,6 +368,31 @@ class MarkdownGenerator:
         
         return results
     
+    def _clean_transcript_text(self, text):
+        """
+        Clean transcript text by removing duplicate consecutive lines.
+        
+        Args:
+            text: Raw transcript text
+            
+        Returns:
+            Cleaned transcript text
+        """
+        if not text:
+            return ""
+        
+        lines = text.split("\n")
+        cleaned_lines = []
+        prev_line = None
+        
+        for line in lines:
+            # Only add the line if it's different from the previous one
+            if line != prev_line:
+                cleaned_lines.append(line)
+            prev_line = line
+            
+        return "\n".join(cleaned_lines)
+    
     def _generate_markdown_content(self, date_obj, conversations, source):
         """
         Generate markdown content from conversation data.
@@ -448,8 +473,10 @@ class MarkdownGenerator:
             # Add transcript if available
             text = conv.get("text", "")
             if text:
+                # Clean the transcript by removing duplicate lines
+                clean_text = self._clean_transcript_text(text)
                 content += "**Transcript:**\n\n"
-                content += f"```\n{text}\n```\n\n"
+                content += f"```\n{clean_text}\n```\n\n"
             
             content += "---\n\n"
         
