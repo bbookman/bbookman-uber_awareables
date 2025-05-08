@@ -1,20 +1,90 @@
 #!/usr/bin/env python3
 """
-Script to directly generate markdown files from the vector store data,
-bypassing the normal search mechanism.
+Script to directly generate markdown files from the vector store data.
+If a date is provided, it generates for that specific date.
+If no date is provided, it checks for 'limitless' data in the vector store
+and generates markdown files for any dates that are missing in the
+LIMITLESS_MD_TARGET directory.
 """
 import os
 import sys
+import argparse
 from pathlib import Path
 from datetime import datetime
 import calendar
 
-# Add parent directory to path
-sys.path.append(str(Path(__file__).parent))
+# Add project root to sys.path to allow imports from config and markdown
+project_root = Path(__file__).resolve().parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+# If this script is moved, or if config/markdown are not in the root, adjust path logic.
 
-# Import our modules
-from storage.vector_store import FAISSVectorStore
-from config import BEE_MD_TARGET, LIMITLESS_MD_TARGET
+try:
+    from config import LIMITLESS_MD_TARGET, BEE_MD_TARGET
+    from markdown.generator import MarkdownGenerator
+except ImportError as e:
+    print(f"Error importing necessary modules: {e}", file=sys.stderr)
+    print("Ensure that config.py exists (loading from .env) and markdown/generator.py is accessible.", file=sys.stderr)
+    print(f"Current sys.path: {sys.path}", file=sys.stderr)
+    sys.exit(1)
+
+def get_dates_from_vector_store(generator):
+    """
+    Retrieves all unique dates from the vector store's stats.
+    Note: These are all dates present in the store, not necessarily specific to 'limitless'.
+    The generation step will need to handle filtering by source.
+    """
+    stats = generator.vector_store.get_stats()
+    return set(stats.get('dates', {}).keys()) # Expects YYYY-MM-DD strings
+
+def get_existing_markdown_file_dates(markdown_dir_path_str):
+    """
+    Scans the given directory for .md files and extracts dates from filenames.
+    Assumes filenames are YYYY-MM-DD.md.
+    """
+    markdown_dir = Path(markdown_dir_path_str)
+    existing_dates = set()
+    if markdown_dir.exists() and markdown_dir.is_dir():
+        for f in markdown_dir.iterdir():
+            if f.is_file() and f.suffix.lower() == '.md':
+                try:
+                    # Validate that the filename stem is a valid date
+                    date_str = f.stem
+                    datetime.strptime(date_str, "%Y-%m-%d")
+                    existing_dates.add(date_str)
+                except ValueError:
+                    if generator_debug_enabled: # Use a global or passed-in debug flag
+                        print(f"Warning: Filename {f.name} is not a valid date format (YYYY-MM-DD.md). Skipping.", file=sys.stderr)
+    return existing_dates
+
+# Global debug flag for helper functions if needed, set in main
+generator_debug_enabled = False
+
+def get_existing_limitless_markdown_dates(limitless_md_path: Path) -> set[str]:
+    """Scans the limitless markdown directory and returns a set of dates for existing files."""
+    existing_dates = set()
+    if not limitless_md_path.exists():
+        return existing_dates
+
+    for year_dir in limitless_md_path.iterdir():
+        if year_dir.is_dir():
+            for month_dir in year_dir.iterdir():
+                if month_dir.is_dir():
+                    for md_file in month_dir.iterdir():
+                        if md_file.is_file() and md_file.suffix == ".md":
+                            # Expected format: Month-DD-YYYY.md (e.g., May-07-2025.md)
+                            try:
+                                parts = md_file.stem.split('-')
+                                if len(parts) == 3:
+                                    month_name_str, day_str, year_str = parts[0], parts[1], parts[2]
+                                    # Convert month name to number
+                                    month_num = datetime.strptime(month_name_str, "%B").month
+                                    # Format to YYYY-MM-DD
+                                    date_str = f"{year_str}-{month_num:02d}-{day_str}"
+                                    existing_dates.add(date_str)
+                            except ValueError:
+                                print(f"Warning: Could not parse date from filename: {md_file.name}")
+    return existing_dates
 
 def create_directories():
     """Create the target directories if they don't exist"""
@@ -59,8 +129,10 @@ def get_documents_from_vector_store():
     # Print what we found
     for source, dates in docs_by_source_date.items():
         print(f"Source '{source}' has documents for {len(dates)} dates:")
-        for date, docs in dates.items():
-            print(f"  - {date}: {len(docs)} documents")
+        # Sort dates for consistent output
+        sorted_dates = sorted(dates.keys())
+        for date in sorted_dates:
+            print(f"  - {date}: {len(dates[date])} documents")
     
     return docs_by_source_date
 
@@ -68,7 +140,9 @@ def generate_markdown_files(docs_by_source_date):
     """Generate markdown files directly from the documents"""
     # Create the target directories
     bee_dir, limitless_dir = create_directories()
-    
+    existing_limitless_dates = get_existing_limitless_markdown_dates(limitless_dir)
+    print(f"Found {len(existing_limitless_dates)} existing Limitless markdown files: {sorted(list(existing_limitless_dates))}")
+
     # Track results
     results = []
     
@@ -91,6 +165,16 @@ def generate_markdown_files(docs_by_source_date):
                 output_dir = bee_dir
             elif source.lower() == "limitless":
                 output_dir = limitless_dir
+                if date_str in existing_limitless_dates:
+                    print(f"Skipping Limitless for {date_str}: Markdown file already exists.")
+                    results.append({
+                        "date": date_str,
+                        "source": source,
+                        "conversations_count": len(documents),
+                        "file": "N/A - Skipped",
+                        "status": "skipped"
+                    })
+                    continue
             else:
                 print(f"Unknown source '{source}', skipping")
                 continue
@@ -149,14 +233,17 @@ def generate_markdown_files(docs_by_source_date):
     # Print summary
     success_count = len([r for r in results if r["status"] == "success"])
     error_count = len([r for r in results if r["status"] == "error"])
+    skipped_count = len([r for r in results if r["status"] == "skipped"])
     print(f"\nMarkdown generation complete:")
     print(f"- Successfully generated: {success_count} files")
     if error_count > 0:
         print(f"- Failed to generate: {error_count} files")
+    if skipped_count > 0:
+        print(f"- Skipped: {skipped_count} files (already exist or unknown source)")
     
     for result in results:
-        status = "✓" if result["status"] == "success" else "✗"
-        print(f"{status} {result['date']}: {result['source']} ({result['conversations_count']} conversations)")
+        status_symbol = "✓" if result["status"] == "success" else ("✗" if result["status"] == "error" else "↷")
+        print(f"{status_symbol} {result['date']}: {result['source']} ({result.get('conversations_count', 'N/A')} conversations)")
         print(f"  File: {result['file']}")
         if result["status"] == "error":
             print(f"  Error: {result['error']}")
@@ -408,14 +495,118 @@ def clear_vector_store_and_add_sample_data():
     
     return successful_embeddings
 
+def main():
+    global generator_debug_enabled
+
+    parser = argparse.ArgumentParser(
+        description="Generate markdown files from vector store data.",
+        formatter_class=argparse.RawTextHelpFormatter
+    )
+    parser.add_argument(
+        "date_str",
+        nargs='?',
+        default=None,
+        help="Optional: Date string in YYYY-MM-DD format.\n"
+             "If provided, generates markdown for this specific date (all sources, unless generator filters).\n"
+             "If not provided, checks for missing 'limitless' source markdown files\n"
+             "based on vector store data and generates them."
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable debug output from the MarkdownGenerator and this script."
+    )
+    args = parser.parse_args()
+
+    generator_debug_enabled = args.debug
+
+    if not LIMITLESS_MD_TARGET:
+        print("Error: LIMITLESS_MD_TARGET is not configured. Check your .env and config.py.", file=sys.stderr)
+        sys.exit(1)
+    
+    # Ensure BEE_MD_TARGET is also available if MarkdownGenerator requires it
+    if not BEE_MD_TARGET:
+        print("Warning: BEE_MD_TARGET is not configured. This might be an issue for MarkdownGenerator.", file=sys.stderr)
+
+
+    generator = MarkdownGenerator(
+        limitless_output_path=LIMITLESS_MD_TARGET,
+        bee_output_path=BEE_MD_TARGET, # Pass even if primary focus is limitless
+        debug=args.debug
+    )
+
+    if args.date_str:
+        print(f"Generating markdown for specific date: {args.date_str}")
+        try:
+            date_obj = datetime.strptime(args.date_str, "%Y-%m-%d").date()
+            # This call might generate for all sources for that date,
+            # depending on MarkdownGenerator's default behavior.
+            generator.generate_markdown_for_date(date_obj)
+            print(f"Markdown generation initiated for {args.date_str}.")
+        except ValueError:
+            print(f"Error: Invalid date format '{args.date_str}'. Please use YYYY-MM-DD.", file=sys.stderr)
+            sys.exit(1)
+        except Exception as e:
+            print(f"Error generating markdown for {args.date_str}: {e}", file=sys.stderr)
+            sys.exit(1)
+    else:
+        print(f"Checking for missing Limitless markdown files in: {LIMITLESS_MD_TARGET}")
+        print("Comparing against dates with data in the vector store...")
+
+        vector_store_dates = get_dates_from_vector_store(generator)
+
+        if not vector_store_dates:
+            print("No dates found in vector store stats. Nothing to process.")
+            return
+
+        if args.debug:
+            print(f"Dates found in vector store stats: {sorted(list(vector_store_dates))}")
+
+        existing_limitless_files_dates = get_existing_markdown_file_dates(LIMITLESS_MD_TARGET)
+        if args.debug:
+            print(f"Dates of existing Limitless MD files: {sorted(list(existing_limitless_files_dates))}")
+
+        missing_dates_for_limitless = []
+        for date_str_from_vector in vector_store_dates:
+            try:
+                # Ensure date string from vector store is valid before comparison
+                datetime.strptime(date_str_from_vector, "%Y-%m-%d") 
+                if date_str_from_vector not in existing_limitless_files_dates:
+                    missing_dates_for_limitless.append(date_str_from_vector)
+            except ValueError:
+                if args.debug:
+                    print(f"Warning: Invalid date string format '{date_str_from_vector}' in vector store stats. Skipping.", file=sys.stderr)
+        
+        if not missing_dates_for_limitless:
+            print("No missing Limitless markdown files found. All appear to be up-to-date.")
+        else:
+            print(f"Found {len(missing_dates_for_limitless)} date(s) potentially missing Limitless markdown files.")
+            print("Attempting to generate them now...")
+            generated_count = 0
+            for date_str_to_generate in sorted(missing_dates_for_limitless):
+                print(f"Attempting to generate Limitless markdown for date: {date_str_to_generate}...")
+                try:
+                    date_obj_to_generate = datetime.strptime(date_str_to_generate, "%Y-%m-%d").date()
+                    
+                    # IMPORTANT ASSUMPTION:
+                    # generator.generate_markdown_for_date can accept a 'source_filter'
+                    # and will only process/write data for 'limitless' into its designated path.
+                    # If it writes an empty file when no 'limitless' data exists for that date,
+                    # that might be acceptable. The key is it shouldn't mix sources or fail.
+                    generator.generate_markdown_for_date(date_obj_to_generate, source_filter=["limitless"])
+                    
+                    # To be more robust, one might check if the file was actually created,
+                    # and if it has content, but this depends on generator's specific behavior.
+                    print(f"Limitless markdown generation initiated for {date_str_to_generate}.")
+                    generated_count += 1
+                except Exception as e:
+                    print(f"Error generating Limitless markdown for {date_str_to_generate}: {e}", file=sys.stderr)
+            
+            if generated_count > 0:
+                print(f"Finished attempting to generate {generated_count} missing Limitless markdown file(s).")
+            else:
+                # This could happen if all "missing" dates actually had no 'limitless' data
+                print("No new Limitless files were generated (possibly no 'limitless' data for those dates, or errors occurred).")
+
 if __name__ == "__main__":
-    print("Generating markdown examples directly from vector store data...")
-    
-    # Clear vector store and add fresh sample data
-    clear_vector_store_and_add_sample_data()
-    
-    # Get documents from vector store
-    docs_by_source_date = get_documents_from_vector_store()
-    
-    # Generate markdown files
-    generate_markdown_files(docs_by_source_date)
+    main()
