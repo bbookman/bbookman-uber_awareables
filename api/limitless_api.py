@@ -7,7 +7,7 @@ from pathlib import Path
 from config import LIMITLESS_INCLUDE_MARKDOWN, LIMITLESS_INCLUDE_HEADINGS, LIMITLESS_ROOT_URL, JSON_TEST, LIMITLESS_V1_LIFELOGS_ENDPOINT
 from debug_json import save_json_response
 
-def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFELOGS_ENDPOINT, limit=50, batch_size=10, includeMarkdown=LIMITLESS_INCLUDE_MARKDOWN, includeHeadings=LIMITLESS_INCLUDE_HEADINGS, date=None, timezone=None, direction="desc"):
+def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFELOGS_ENDPOINT, limit=50, batch_size=10, includeMarkdown=LIMITLESS_INCLUDE_MARKDOWN, includeHeadings=LIMITLESS_INCLUDE_HEADINGS, date=None, timezone=None, direction="desc", existing_dates=None):
     """
     Fetch lifelogs from the Limitless API, stopping when we hit existing data.
     
@@ -22,6 +22,7 @@ def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFE
         date: Date to fetch lifelogs for (YYYY-MM-DD)
         timezone: Timezone for dates
         direction: Sort direction ("asc" or "desc")
+        existing_dates: Set of dates that already have markdown files
     
     Returns:
         List of lifelog objects
@@ -29,6 +30,9 @@ def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFE
     all_lifelogs = []
     cursor = None
     latest_date = None
+    duplicate_dates_count = 0
+    new_dates_found = False
+    existing_dates = existing_dates or set()
     
     # If limit is None, fetch all available lifelogs
     # Otherwise, set a batch size and fetch until we reach the limit
@@ -37,7 +41,6 @@ def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFE
     
     while True:
         params = {  
-            "limit": batch_size,
             "includeMarkdown": "true" if includeMarkdown else "false",
             "includeHeadings": "true" if includeHeadings else "false",
             "date": date,
@@ -68,6 +71,15 @@ def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFE
         # Stop if we got no lifelogs
         if not lifelogs:
             break
+        
+        # If we've found 3 consecutive pages with only dates that already exist in markdown files,
+        # and we've found at least one new date, stop (avoid unnecessary API calls)
+        if duplicate_dates_count >= 3 and new_dates_found:
+            print("Stopping API requests: Found 3 consecutive pages with only existing dates")
+            break
+            
+        # Track if this page contains any new dates
+        page_has_new_date = False
             
         # Check dates to see if we have new data
         for lifelog in lifelogs:
@@ -77,17 +89,30 @@ def get_lifelogs(api_key, api_url=LIMITLESS_ROOT_URL, endpoint=LIMITLESS_V1_LIFE
             if not latest_date:
                 latest_date = lifelog_date
             
-            # If we're in descending order and hit a date earlier than our latest,
-            # we've found all new data
+            # Check date conditions
+            if lifelog_date in existing_dates:
+                # We've seen this date before
+                continue
             elif direction == "desc" and lifelog_date < latest_date:
+                # If we're in descending order and hit a date earlier than our latest,
+                # we've found all new data
                 return all_lifelogs
-            
-            # If we're in ascending order and hit a date later than our latest,
-            # we've found all new data
             elif direction == "asc" and lifelog_date > latest_date:
+                # If we're in ascending order and hit a date later than our latest,
+                # we've found all new data
                 return all_lifelogs
+            else:
+                # New date found
+                page_has_new_date = True
+                new_dates_found = True
             
             all_lifelogs.append(lifelog)
+        
+        # Track consecutive pages with only existing dates
+        if not page_has_new_date:
+            duplicate_dates_count += 1
+        else:
+            duplicate_dates_count = 0
         
         # Check if we've reached the requested limit
         if limit is not None and len(all_lifelogs) >= limit:

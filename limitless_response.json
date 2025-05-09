@@ -1,0 +1,3804 @@
+{
+  "data": {
+    "lifelogs": [
+      {
+        "contents": [
+          {
+            "content": "A conversation about a heartwarming homecoming video of a military dad and his daughters, followed by reflections on life's changes, societal structures, and human vulnerability.",
+            "type": "heading1"
+          },
+          {
+            "content": "A discussion about a dad returning home after a 3-year deployment and the sacrifices made by military families.",
+            "type": "heading2"
+          },
+          {
+            "content": "750. Oh, just saw an amazing video this morning. Dad's been deployed for three years, comes home to his two beautiful daughters.",
+            "endOffsetMs": 7000,
+            "endTime": "2025-05-08T08:27:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 0,
+            "startTime": "2025-05-08T08:27:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh my gosh. Right? And of course they've been FaceTiming every day for three years, but daughters are watching TV, dad says like literally one word and now the daughters realize, dad's here and to see that moment. Oh my god.",
+            "endOffsetMs": 20000,
+            "endTime": "2025-05-08T08:28:09-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 7000,
+            "startTime": "2025-05-08T08:27:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So beautiful. Also makes me absolutely realize the sacrifice that not only the brave military people are making, but their families have to go through to keep all of us safe, okay?",
+            "endOffsetMs": 30000,
+            "endTime": "2025-05-08T08:28:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 20000,
+            "startTime": "2025-05-08T08:28:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "What a sacrifice those daughters make for us, right? For us, it's it's incredible. You military families are amazing, amazing, amazing Americans. Everyone is. And the sacrifice is seen and recognized and appreciated.",
+            "endOffsetMs": 44000,
+            "endTime": "2025-05-08T08:28:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 30000,
+            "startTime": "2025-05-08T08:28:19-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm for these girls that I have daddy around. And these girls do that for all of us for all of us.",
+            "endOffsetMs": 50000,
+            "endTime": "2025-05-08T08:28:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 44000,
+            "startTime": "2025-05-08T08:28:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Right?",
+            "endOffsetMs": 50001,
+            "endTime": "2025-05-08T08:28:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 50000,
+            "startTime": "2025-05-08T08:28:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "When is the next day we get to appreciate military people? Oh yeah, every day. You don't have to wait till a holiday to say thank you to any military families. You can thank one every day.",
+            "endOffsetMs": 60000,
+            "endTime": "2025-05-08T08:28:49-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 52001,
+            "startTime": "2025-05-08T08:28:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "A brief mention of playing music by Anne Clark and Bony Bear.",
+            "type": "heading2"
+          },
+          {
+            "content": "Every day. And we should play it mixed with Anne Clark.",
+            "endOffsetMs": 65000,
+            "endTime": "2025-05-08T08:28:54-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 60000,
+            "startTime": "2025-05-08T08:28:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Rosalind by Bony Bear and St. Vincent now playing on Apple Music.",
+            "endOffsetMs": 70000,
+            "endTime": "2025-05-08T08:28:59-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 67000,
+            "startTime": "2025-05-08T08:28:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yes, for Bony Bear and Clark.",
+            "endOffsetMs": 76000,
+            "endTime": "2025-05-08T08:29:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 71000,
+            "startTime": "2025-05-08T08:29:00-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Poetic reflections on change, expectations, and societal structures.",
+            "type": "heading2"
+          },
+          {
+            "content": "All this time that has come to nothing. All that we require is being rearranged. I've no wish to look to the future.",
+            "endOffsetMs": 148000,
+            "endTime": "2025-05-08T08:30:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 137000,
+            "startTime": "2025-05-08T08:30:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "For my expectations will no doubt be changed. Just rolling along on the rest of the waves. My statements and strategies are quickly dismissed.",
+            "endOffsetMs": 163000,
+            "endTime": "2025-05-08T08:30:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 150000,
+            "startTime": "2025-05-08T08:30:19-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Poison pens on invisible paper. Still knuckles concealed by velvet fists.",
+            "endOffsetMs": 172000,
+            "endTime": "2025-05-08T08:30:41-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 164000,
+            "startTime": "2025-05-08T08:30:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "What is the chance of us living some of our simplest dreams are all the structures we build here really as proud as they seem.",
+            "endOffsetMs": 187000,
+            "endTime": "2025-05-08T08:30:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 174000,
+            "startTime": "2025-05-08T08:30:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Well. The dying of the lovers of this modern world, the power and the glory survives with radioactive bargaining and the valueless of our lives.",
+            "endOffsetMs": 202000,
+            "endTime": "2025-05-08T08:31:11-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 187000,
+            "startTime": "2025-05-08T08:30:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "My turn to crumble, my turn to fold. I'm so very humble to nothing at all.",
+            "endOffsetMs": 212000,
+            "endTime": "2025-05-08T08:31:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 204000,
+            "startTime": "2025-05-08T08:31:13-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Isn't it like you have a",
+            "endOffsetMs": 265000,
+            "endTime": "2025-05-08T08:32:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 263000,
+            "startTime": "2025-05-08T08:32:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Musings on silence, sadness, and the fragility of human constructs, followed by imagery of vulnerability and societal pressures.",
+            "type": "heading2"
+          },
+          {
+            "content": "This is where silence drones its course.",
+            "endOffsetMs": 308000,
+            "endTime": "2025-05-08T08:32:57-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 305000,
+            "startTime": "2025-05-08T08:32:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And sadness wipes its eyes upon us. We fall from a structure built on troubled minds.",
+            "endOffsetMs": 323000,
+            "endTime": "2025-05-08T08:33:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 312000,
+            "startTime": "2025-05-08T08:33:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And all becomes one. We plunge as coldly as winter.",
+            "endOffsetMs": 332000,
+            "endTime": "2025-05-08T08:33:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 326000,
+            "startTime": "2025-05-08T08:33:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Soldiers in uniforms of nudity march over open hearts. Sweetly and sickly scented by roses.",
+            "endOffsetMs": 349000,
+            "endTime": "2025-05-08T08:33:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 339000,
+            "startTime": "2025-05-08T08:33:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And your world is crushing you like those flowers. Sweating into your skin with the ink of thorns.",
+            "endOffsetMs": 363000,
+            "endTime": "2025-05-08T08:33:52-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 354000,
+            "startTime": "2025-05-08T08:33:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Fashion faces sink into silence. All that seems trendy brush shoulders.",
+            "endOffsetMs": 377000,
+            "endTime": "2025-05-08T08:34:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 370000,
+            "startTime": "2025-05-08T08:33:59-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Lost foundations.",
+            "endOffsetMs": 383202,
+            "endTime": "2025-05-08T08:34:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 380202,
+            "startTime": "2025-05-08T08:34:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "build foundations on this bone.",
+            "endOffsetMs": 386202,
+            "endTime": "2025-05-08T08:34:15-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 384202,
+            "startTime": "2025-05-08T08:34:13-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Reflections on lost foundations and the need to rebuild.",
+            "type": "heading2"
+          },
+          {
+            "content": "That's it.",
+            "endOffsetMs": 500202,
+            "endTime": "2025-05-08T08:36:09-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 499202,
+            "startTime": "2025-05-08T08:36:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's it.",
+            "endOffsetMs": 502202,
+            "endTime": "2025-05-08T08:36:11-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 500202,
+            "startTime": "2025-05-08T08:36:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You're complete.",
+            "endOffsetMs": 505202,
+            "endTime": "2025-05-08T08:36:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 503202,
+            "startTime": "2025-05-08T08:36:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Commentary on completeness and the creation of hell.",
+            "type": "heading2"
+          },
+          {
+            "content": "create hell, I'm supposed to miss.",
+            "endOffsetMs": 518202,
+            "endTime": "2025-05-08T08:36:27-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 515202,
+            "startTime": "2025-05-08T08:36:24-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "confirm the failure of it all.",
+            "endOffsetMs": 522202,
+            "endTime": "2025-05-08T08:36:31-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 519202,
+            "startTime": "2025-05-08T08:36:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "falling and crawling.",
+            "endOffsetMs": 532202,
+            "endTime": "2025-05-08T08:36:41-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 530202,
+            "startTime": "2025-05-08T08:36:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "falling and crawling.",
+            "endOffsetMs": 536202,
+            "endTime": "2025-05-08T08:36:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 534202,
+            "startTime": "2025-05-08T08:36:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "A slip in the ground scratches your name.",
+            "endOffsetMs": 541202,
+            "endTime": "2025-05-08T08:36:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 538202,
+            "startTime": "2025-05-08T08:36:47-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "A scream in the darkness is searching again and again.",
+            "endOffsetMs": 547202,
+            "endTime": "2025-05-08T08:36:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 542202,
+            "startTime": "2025-05-08T08:36:51-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Imagery of falling, crawling, and searching in darkness.",
+            "type": "heading2"
+          },
+          {
+            "content": "What you know is waiting for silence to rise.",
+            "endOffsetMs": 564202,
+            "endTime": "2025-05-08T08:37:13-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 561202,
+            "startTime": "2025-05-08T08:37:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "True superstition combined with sickness is poison that reaches my soul.",
+            "endOffsetMs": 571202,
+            "endTime": "2025-05-08T08:37:20-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 565202,
+            "startTime": "2025-05-08T08:37:14-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "This terror that blackens my soul.",
+            "endOffsetMs": 576202,
+            "endTime": "2025-05-08T08:37:25-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 573202,
+            "startTime": "2025-05-08T08:37:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm a smile in your strategy.",
+            "endOffsetMs": 580202,
+            "endTime": "2025-05-08T08:37:29-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 577202,
+            "startTime": "2025-05-08T08:37:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion of superstition, sickness, terror, and being a smile in someone's strategy.",
+            "type": "heading2"
+          },
+          {
+            "content": "And laughter in your plan.",
+            "endOffsetMs": 583202,
+            "endTime": "2025-05-08T08:37:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 581202,
+            "startTime": "2025-05-08T08:37:30-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And the execution of it all.",
+            "endOffsetMs": 587202,
+            "endTime": "2025-05-08T08:37:36-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 585202,
+            "startTime": "2025-05-08T08:37:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "My death itself, love is rotting inside of me.",
+            "endOffsetMs": 595202,
+            "endTime": "2025-05-08T08:37:44-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 592202,
+            "startTime": "2025-05-08T08:37:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "But there'll be no protection for you.",
+            "endOffsetMs": 599202,
+            "endTime": "2025-05-08T08:37:48-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 596202,
+            "startTime": "2025-05-08T08:37:45-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You cannot hide me.",
+            "endOffsetMs": 601202,
+            "endTime": "2025-05-08T08:37:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 599202,
+            "startTime": "2025-05-08T08:37:48-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Thoughts on love rotting, lack of protection, and the nature of lies.",
+            "type": "heading2"
+          },
+          {
+            "content": "I am told that better lies.",
+            "endOffsetMs": 610202,
+            "endTime": "2025-05-08T08:37:59-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 607202,
+            "startTime": "2025-05-08T08:37:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "But like seasons, I know it will pass.",
+            "endOffsetMs": 614202,
+            "endTime": "2025-05-08T08:38:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 611202,
+            "startTime": "2025-05-08T08:38:00-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It will always return again, though.",
+            "endOffsetMs": 618202,
+            "endTime": "2025-05-08T08:38:07-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 615202,
+            "startTime": "2025-05-08T08:38:04-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "A small amount of love is a momentary, tiny thing.",
+            "endOffsetMs": 623202,
+            "endTime": "2025-05-08T08:38:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 619202,
+            "startTime": "2025-05-08T08:38:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Winter will always return again.",
+            "endOffsetMs": 629202,
+            "endTime": "2025-05-08T08:38:18-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 626202,
+            "startTime": "2025-05-08T08:38:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And I should have known.",
+            "endOffsetMs": 636202,
+            "endTime": "2025-05-08T08:38:25-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 633202,
+            "startTime": "2025-05-08T08:38:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We're only killing time.",
+            "endOffsetMs": 640202,
+            "endTime": "2025-05-08T08:38:29-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 637202,
+            "startTime": "2025-05-08T08:38:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Now you have chosen your killing time.",
+            "endOffsetMs": 644202,
+            "endTime": "2025-05-08T08:38:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 642202,
+            "startTime": "2025-05-08T08:38:31-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I took you ready for killing time.",
+            "endOffsetMs": 649202,
+            "endTime": "2025-05-08T08:38:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 645202,
+            "startTime": "2025-05-08T08:38:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The lies that spew out of your mouth like blood and the subtle shadows because it's possible.",
+            "endOffsetMs": 656202,
+            "endTime": "2025-05-08T08:38:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 649202,
+            "startTime": "2025-05-08T08:38:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Musings on the cyclical nature of lies and the concept of killing time.",
+            "type": "heading2"
+          },
+          {
+            "content": "We have faith like a cross, faith like a cross.",
+            "endOffsetMs": 664202,
+            "endTime": "2025-05-08T08:38:53-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 660202,
+            "startTime": "2025-05-08T08:38:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have trust like a fly, trust like a fly.",
+            "endOffsetMs": 668202,
+            "endTime": "2025-05-08T08:38:57-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 664202,
+            "startTime": "2025-05-08T08:38:53-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have faith like a cross, faith like a cross.",
+            "endOffsetMs": 672202,
+            "endTime": "2025-05-08T08:39:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 668202,
+            "startTime": "2025-05-08T08:38:57-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have trust like a fly, trust like a fly.",
+            "endOffsetMs": 675202,
+            "endTime": "2025-05-08T08:39:04-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 672202,
+            "startTime": "2025-05-08T08:39:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have faith like a cross, faith like a cross.",
+            "endOffsetMs": 679202,
+            "endTime": "2025-05-08T08:39:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 675202,
+            "startTime": "2025-05-08T08:39:04-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have trust like a fly, trust like a fly.",
+            "endOffsetMs": 683202,
+            "endTime": "2025-05-08T08:39:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 679202,
+            "startTime": "2025-05-08T08:39:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have faith.",
+            "endOffsetMs": 685202,
+            "endTime": "2025-05-08T08:39:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 683202,
+            "startTime": "2025-05-08T08:39:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have trust.",
+            "endOffsetMs": 689202,
+            "endTime": "2025-05-08T08:39:18-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 687202,
+            "startTime": "2025-05-08T08:39:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have faith.",
+            "endOffsetMs": 693202,
+            "endTime": "2025-05-08T08:39:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 691202,
+            "startTime": "2025-05-08T08:39:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We have trust.",
+            "endOffsetMs": 697202,
+            "endTime": "2025-05-08T08:39:26-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 694202,
+            "startTime": "2025-05-08T08:39:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Killing time.",
+            "endOffsetMs": 701202,
+            "endTime": "2025-05-08T08:39:30-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 699202,
+            "startTime": "2025-05-08T08:39:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Killing time.",
+            "endOffsetMs": 705202,
+            "endTime": "2025-05-08T08:39:34-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 703202,
+            "startTime": "2025-05-08T08:39:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Killing time.",
+            "endOffsetMs": 710202,
+            "endTime": "2025-05-08T08:39:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 706202,
+            "startTime": "2025-05-08T08:39:35-04:00",
+            "type": "blockquote"
+          }
+        ],
+        "id": "qK9W9M7foszaGjzDeVgj",
+        "title": "A conversation about a heartwarming homecoming video of a military dad and his daughters, followed by reflections on life's changes, societal structures, and human vulnerability.",
+        "startTime": "2025-05-08T08:27:49-04:00",
+        "endTime": "2025-05-08T08:39:39-04:00"
+      },
+      {
+        "contents": [
+          {
+            "content": "Conversation about closing the door and a missing wallet.",
+            "type": "heading1"
+          },
+          {
+            "content": "Door, Leaving, and Noises",
+            "type": "heading2"
+          },
+          {
+            "content": "Request to close the door and Ivette's inability to do so.",
+            "type": "heading3"
+          },
+          {
+            "content": "And then close the door.",
+            "endOffsetMs": 2000,
+            "endTime": "2025-05-08T08:01:27-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 0,
+            "startTime": "2025-05-08T08:01:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Can you close the door?",
+            "endOffsetMs": 4000,
+            "endTime": "2025-05-08T08:01:29-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 3000,
+            "startTime": "2025-05-08T08:01:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I can't close it, and then I'm thinking.",
+            "endOffsetMs": 11000,
+            "endTime": "2025-05-08T08:01:36-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 7000,
+            "startTime": "2025-05-08T08:01:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Do you want your top?",
+            "endOffsetMs": 13000,
+            "endTime": "2025-05-08T08:01:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 11000,
+            "startTime": "2025-05-08T08:01:36-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about leaving and taking something.",
+            "type": "heading3"
+          },
+          {
+            "content": "You didn't leave. I'm going to leave it.",
+            "endOffsetMs": 15000,
+            "endTime": "2025-05-08T08:01:40-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 13000,
+            "startTime": "2025-05-08T08:01:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm going to just take it from me.",
+            "endOffsetMs": 18000,
+            "endTime": "2025-05-08T08:01:43-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 16000,
+            "startTime": "2025-05-08T08:01:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, I'm going to take it with me.",
+            "endOffsetMs": 20000,
+            "endTime": "2025-05-08T08:01:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 18000,
+            "startTime": "2025-05-08T08:01:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I don't I don't know why.",
+            "endOffsetMs": 23000,
+            "endTime": "2025-05-08T08:01:48-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 21000,
+            "startTime": "2025-05-08T08:01:46-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Ivette's concerns about noises in the night and the open door.",
+            "type": "heading3"
+          },
+          {
+            "content": "I hear noises in the night that I left it.",
+            "endOffsetMs": 29000,
+            "endTime": "2025-05-08T08:01:54-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 26000,
+            "startTime": "2025-05-08T08:01:51-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm like, what's going on?",
+            "endOffsetMs": 31000,
+            "endTime": "2025-05-08T08:01:56-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 29000,
+            "startTime": "2025-05-08T08:01:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It was totally open.",
+            "endOffsetMs": 32000,
+            "endTime": "2025-05-08T08:01:57-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 31000,
+            "startTime": "2025-05-08T08:01:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The front open.",
+            "endOffsetMs": 34000,
+            "endTime": "2025-05-08T08:01:59-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 33000,
+            "startTime": "2025-05-08T08:01:58-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, you told me that.",
+            "endOffsetMs": 35000,
+            "endTime": "2025-05-08T08:02:00-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 34000,
+            "startTime": "2025-05-08T08:01:59-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And then I'm thinking the door is open now, then I'm like.",
+            "endOffsetMs": 39000,
+            "endTime": "2025-05-08T08:02:04-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 36000,
+            "startTime": "2025-05-08T08:02:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Right.",
+            "endOffsetMs": 40000,
+            "endTime": "2025-05-08T08:02:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 39000,
+            "startTime": "2025-05-08T08:02:04-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The was away.",
+            "endOffsetMs": 42000,
+            "endTime": "2025-05-08T08:02:07-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 40000,
+            "startTime": "2025-05-08T08:02:05-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Explanation of the open door.",
+            "type": "heading3"
+          },
+          {
+            "content": "Oh, I had No, I I locked it. I forgot that he was out. Sorry.",
+            "endOffsetMs": 48000,
+            "endTime": "2025-05-08T08:02:13-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 43000,
+            "startTime": "2025-05-08T08:02:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You forgot you were outside. I know.",
+            "endOffsetMs": 52000,
+            "endTime": "2025-05-08T08:02:17-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 50000,
+            "startTime": "2025-05-08T08:02:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I know.",
+            "endOffsetMs": 54000,
+            "endTime": "2025-05-08T08:02:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 53000,
+            "startTime": "2025-05-08T08:02:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Question about the location of a wallet.",
+            "type": "heading3"
+          },
+          {
+            "content": "Hey, last night where did you put my wallet? Is it in my bag?",
+            "endOffsetMs": 59000,
+            "endTime": "2025-05-08T08:02:24-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 55000,
+            "startTime": "2025-05-08T08:02:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No, it's uh it's out there. Okay.",
+            "endOffsetMs": 62000,
+            "endTime": "2025-05-08T08:02:27-04:00",
+            "speakerName": "Ivette",
+            "startOffsetMs": 60000,
+            "startTime": "2025-05-08T08:02:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Comment about allergies improving.",
+            "type": "heading3"
+          },
+          {
+            "content": "Yeah, my allergies are already starting to feel better cuz I put that spray.",
+            "endOffsetMs": 98000,
+            "endTime": "2025-05-08T08:03:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 93000,
+            "startTime": "2025-05-08T08:02:58-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "All right, let's take it. Oh, let me get my breakfast up here.",
+            "endOffsetMs": 269733,
+            "endTime": "2025-05-08T08:05:55-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 265733,
+            "startTime": "2025-05-08T08:05:51-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Food, Errands, and Random Comments",
+            "type": "heading2"
+          },
+          {
+            "content": "Discussion about breakfast and forgotten chips.",
+            "type": "heading3"
+          },
+          {
+            "content": "Yeah, better than you forgot your chips yesterday.",
+            "endOffsetMs": 320733,
+            "endTime": "2025-05-08T08:06:46-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 317733,
+            "startTime": "2025-05-08T08:06:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Request to grab something by the store.",
+            "type": "heading3"
+          },
+          {
+            "content": "Take it by, we can have one, please.",
+            "endOffsetMs": 326733,
+            "endTime": "2025-05-08T08:06:52-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 324733,
+            "startTime": "2025-05-08T08:06:50-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Comment about a hippie.",
+            "type": "heading3"
+          },
+          {
+            "content": "Here's a hippie.",
+            "endOffsetMs": 342733,
+            "endTime": "2025-05-08T08:07:08-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 341733,
+            "startTime": "2025-05-08T08:07:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Statement about needing to stop.",
+            "type": "heading3"
+          },
+          {
+            "content": "I've got to stop.",
+            "endOffsetMs": 374733,
+            "endTime": "2025-05-08T08:07:40-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 372733,
+            "startTime": "2025-05-08T08:07:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Where's everybody?",
+            "endOffsetMs": 434471,
+            "endTime": "2025-05-08T08:08:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 432471,
+            "startTime": "2025-05-08T08:08:37-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Don't forget your back backpack and did you get chips?",
+            "endOffsetMs": 440471,
+            "endTime": "2025-05-08T08:08:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 437471,
+            "startTime": "2025-05-08T08:08:42-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You don't want chips?",
+            "endOffsetMs": 443471,
+            "endTime": "2025-05-08T08:08:48-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 442471,
+            "startTime": "2025-05-08T08:08:47-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yep, yep, yep, yep, yep.",
+            "endOffsetMs": 445471,
+            "endTime": "2025-05-08T08:08:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 443471,
+            "startTime": "2025-05-08T08:08:48-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about getting chips and a backpack.",
+            "type": "heading3"
+          },
+          {
+            "content": "harassment ended up crashing trying to get into her house into the gate.",
+            "endOffsetMs": 531471,
+            "endTime": "2025-05-08T08:10:16-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 528471,
+            "startTime": "2025-05-08T08:10:13-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's worth that I'm arresting him.",
+            "endOffsetMs": 533471,
+            "endTime": "2025-05-08T08:10:18-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 531471,
+            "startTime": "2025-05-08T08:10:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So we'll probably face some prison time for uh, you know, the harassment and super scary that when she was home this all was going down, he knew where she was, he knew to get to her.",
+            "endOffsetMs": 541471,
+            "endTime": "2025-05-08T08:10:26-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 533471,
+            "startTime": "2025-05-08T08:10:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 542471,
+            "endTime": "2025-05-08T08:10:27-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 541471,
+            "startTime": "2025-05-08T08:10:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It just doesn't make me feel good.",
+            "endOffsetMs": 544471,
+            "endTime": "2025-05-08T08:10:29-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 543471,
+            "startTime": "2025-05-08T08:10:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Not at all.",
+            "endOffsetMs": 545471,
+            "endTime": "2025-05-08T08:10:30-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 544471,
+            "startTime": "2025-05-08T08:10:29-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The Golden Globes announced a podcast um into their lineup, a podcast category into their lineup, which is very interesting. And a little reunited report, Matthew Broderick and Alan Ruck from Ferris Bueller's Day Off reuniting for any film called The Best is Yet to Come. And Parks and Rec stars Amy Poler and Mike Sure are collaborating on a new comedy, Revery from Peacock titled Big. So Parks and Rec was amazing.",
+            "endOffsetMs": 571471,
+            "endTime": "2025-05-08T08:10:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 545471,
+            "startTime": "2025-05-08T08:10:30-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Reunited. I'll put all this news and more online for you today as you 1075.com.",
+            "endOffsetMs": 576471,
+            "endTime": "2025-05-08T08:11:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 571471,
+            "startTime": "2025-05-08T08:10:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Advertisements, Entertainment, and Other Stories",
+            "type": "heading2"
+          },
+          {
+            "content": "Conversation about someone's harassment and legal trouble, followed by entertainment news.",
+            "type": "heading3"
+          },
+          {
+            "content": "I'm a get her. I'm a get her right now. I'm about to pop make it rain. I'm a get her.",
+            "endOffsetMs": 584471,
+            "endTime": "2025-05-08T08:11:09-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 578471,
+            "startTime": "2025-05-08T08:11:03-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Repeated statement about getting someone.",
+            "type": "heading3"
+          },
+          {
+            "content": "I'm a get her.",
+            "endOffsetMs": 647471,
+            "endTime": "2025-05-08T08:12:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 645471,
+            "startTime": "2025-05-08T08:12:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm a get her.",
+            "endOffsetMs": 701471,
+            "endTime": "2025-05-08T08:13:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 700471,
+            "startTime": "2025-05-08T08:13:05-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm a get her.",
+            "endOffsetMs": 707472,
+            "endTime": "2025-05-08T08:13:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 707471,
+            "startTime": "2025-05-08T08:13:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm a get her.",
+            "endOffsetMs": 758471,
+            "endTime": "2025-05-08T08:14:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 757472,
+            "startTime": "2025-05-08T08:14:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm a get her. I'm a get her. I'm a get her.",
+            "endOffsetMs": 777471,
+            "endTime": "2025-05-08T08:14:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 775471,
+            "startTime": "2025-05-08T08:14:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Story about a family's dog meeting new kittens, and a woman suing over a Star Wars personality test.",
+            "type": "heading3"
+          },
+          {
+            "content": "1075, let's ride the roller coaster of love, you got the shouting. Love is so up and down. Let's go with the up part of it. I'm around the video. Love is in the air. Watch a video of this beautiful family. You got the family dog, the family cat, the family cat has some some babies and now the dog is meeting the babies for the first time and like watch the woman's reaction to that and it's just so beautiful.",
+            "endOffsetMs": 798471,
+            "endTime": "2025-05-08T08:14:43-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 777471,
+            "startTime": "2025-05-08T08:14:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And then mom and the dog, they were best friends, like they're cuddling and loving and the babies are feeding on the mom. It's just a beautiful experience. Sometimes life can be so, so wonderful.",
+            "endOffsetMs": 808471,
+            "endTime": "2025-05-08T08:14:53-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 799471,
+            "startTime": "2025-05-08T08:14:44-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And then it can get so bad. A woman in England was riding the roller coaster of life without down down park. So they went to England, they're coming to have some fun. They're like, hey, let's all take an online personality test and it will link you to which Star Wars character you most closely represent. All fun. It was for May 4th. May the fools be with you. They they sent it out on Friday and said do this survey on the weekend and on Monday there'll be a prize for everyone who participates. Kind of fun. I bet I can see every business doing it.",
+            "endOffsetMs": 832471,
+            "endTime": "2025-05-08T08:15:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 809471,
+            "startTime": "2025-05-08T08:14:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Well, a lady was offended because she came back as Darth Vader.",
+            "endOffsetMs": 838471,
+            "endTime": "2025-05-08T08:15:23-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 833471,
+            "startTime": "2025-05-08T08:15:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Right. Quick. Immediately went and contacted an attorney. They sued. She went $40,000.",
+            "endOffsetMs": 847471,
+            "endTime": "2025-05-08T08:15:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 839471,
+            "startTime": "2025-05-08T08:15:24-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh my god.",
+            "endOffsetMs": 848471,
+            "endTime": "2025-05-08T08:15:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 847471,
+            "startTime": "2025-05-08T08:15:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Also, what's so bad about Darth Vader?",
+            "endOffsetMs": 851471,
+            "endTime": "2025-05-08T08:15:36-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 849471,
+            "startTime": "2025-05-08T08:15:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Right, that's who I would want to be.",
+            "endOffsetMs": 853471,
+            "endTime": "2025-05-08T08:15:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 851471,
+            "startTime": "2025-05-08T08:15:36-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I remember one time, so they used to have these filter things on I think that was on Facebook if I was Darth Vader. You and Instagram where you would like it's like you would push a button and it would like think about it and it would like bubble up and it would give you a character. And I don't remember what it was, but it gave my son some Disney character that he was not happy about and he started screaming crying in the video. What was that? I don't remember what it was, but he was not or maybe it was a princess or something. I'm either way. I have it somewhere in my phone. I'd have to find it. But yeah.",
+            "endOffsetMs": 881471,
+            "endTime": "2025-05-08T08:16:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 853471,
+            "startTime": "2025-05-08T08:15:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "He was like five or six at that point.",
+            "endOffsetMs": 882471,
+            "endTime": "2025-05-08T08:16:07-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 881471,
+            "startTime": "2025-05-08T08:16:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So this is pretty cool. He was acting like a four year old.",
+            "endOffsetMs": 884471,
+            "endTime": "2025-05-08T08:16:09-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 883471,
+            "startTime": "2025-05-08T08:16:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, four year old.",
+            "endOffsetMs": 885471,
+            "endTime": "2025-05-08T08:16:10-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 884471,
+            "startTime": "2025-05-08T08:16:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, congratulations. Congrats.",
+            "endOffsetMs": 887471,
+            "endTime": "2025-05-08T08:16:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 885471,
+            "startTime": "2025-05-08T08:16:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And then they got 40 what thousand million?",
+            "endOffsetMs": 889471,
+            "endTime": "2025-05-08T08:16:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 887471,
+            "startTime": "2025-05-08T08:16:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "40,000. Good lord.",
+            "endOffsetMs": 891471,
+            "endTime": "2025-05-08T08:16:16-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 889471,
+            "startTime": "2025-05-08T08:16:14-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The roller coaster of love.",
+            "endOffsetMs": 896680,
+            "endTime": "2025-05-08T08:16:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 891680,
+            "startTime": "2025-05-08T08:16:17-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You're going to love this, the Greek fest. Only one emotion there. Happy, happy, happy, right? Greek music, Greek dancing, the smell of Greek food.",
+            "endOffsetMs": 904680,
+            "endTime": "2025-05-08T08:16:30-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 896680,
+            "startTime": "2025-05-08T08:16:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "There's even Greek fake Greek beer everywhere. It is. Like a full on Greek celebration. Would you like two tickets to get in?",
+            "endOffsetMs": 912680,
+            "endTime": "2025-05-08T08:16:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 904680,
+            "startTime": "2025-05-08T08:16:30-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Free meals for you and friend, your main, your side, your drink, all free. Call into it right now. 3511075 call or seven win.",
+            "endOffsetMs": 920680,
+            "endTime": "2025-05-08T08:16:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 912680,
+            "startTime": "2025-05-08T08:16:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "trending in Wilmington.",
+            "endOffsetMs": 924680,
+            "endTime": "2025-05-08T08:16:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 922680,
+            "startTime": "2025-05-08T08:16:48-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Sally when the wine runs out.",
+            "endOffsetMs": 926680,
+            "endTime": "2025-05-08T08:16:52-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 924680,
+            "startTime": "2025-05-08T08:16:50-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about a Greek festival and a radio advertisement.",
+            "type": "heading3"
+          },
+          {
+            "content": "These new music clips powered by Lumos Fiber internet built for the future. Learn more at Lumosfiber.com/future.",
+            "endOffsetMs": 965680,
+            "endTime": "2025-05-08T08:17:31-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 958680,
+            "startTime": "2025-05-08T08:17:24-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So you're going to take mama out for Mother's Day on Sunday? How about we take mother somewhere where she can get a free robe on Mother's Day, $100 gift card to a laser and skin clinic and we'll raise money for a mother in need in our town. Cheers for a cause.",
+            "endOffsetMs": 978680,
+            "endTime": "2025-05-08T08:17:44-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 966680,
+            "startTime": "2025-05-08T08:17:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "This Sunday to Robery, Kipo, Jailhouse Provisions on Bald Head Island. OC, G Frog, Tequila Waterfront, Saber, Bridge Tender, Tequila, Comida and Cantina and Monkey Junction, Pose and Fish House. Cheers for a cause.",
+            "endOffsetMs": 992680,
+            "endTime": "2025-05-08T08:17:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 979680,
+            "startTime": "2025-05-08T08:17:45-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "This Sunday. Brought to you by Blue Shark Vodka, the world's smoothest vodka. Roby Powers Pro tips. Pro two from Miracle Leave in spray. Miracle Leave in conditioner with sunscreen, put it in while you're at the beach to help detangle and soften your hair and make it more manageable after you leave the beach.",
+            "endOffsetMs": 1010680,
+            "endTime": "2025-05-08T08:18:16-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 993680,
+            "startTime": "2025-05-08T08:17:59-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Advertisements for Lumos Fiber internet, a Mother's Day event, and hair care products.",
+            "type": "heading3"
+          },
+          {
+            "content": "Don't settle for bad furniture. At Haberdash, you're guaranteed to find comfort that won't quit. And right now, Haberdash is having their best Memorial Day sale ever. Upgrade your home with furniture that's actually built for real life and save money doing it. Visit your local Haberdash, Blue and Fall.",
+            "endOffsetMs": 1026680,
+            "endTime": "2025-05-08T08:18:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1012680,
+            "startTime": "2025-05-08T08:18:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Blue Dragon featuring Anderson.",
+            "endOffsetMs": 1031680,
+            "endTime": "2025-05-08T08:18:37-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1028680,
+            "startTime": "2025-05-08T08:18:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Advertisements for Haberdash furniture and Blue Dragon.",
+            "type": "heading3"
+          },
+          {
+            "content": "the biggest prize we've ever had. Usually it's either like free admission or free food. This year it's free everything.",
+            "endOffsetMs": 1237680,
+            "endTime": "2025-05-08T08:22:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1232680,
+            "startTime": "2025-05-08T08:21:58-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's amazing. Thank you.",
+            "endOffsetMs": 1239680,
+            "endTime": "2025-05-08T08:22:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1237680,
+            "startTime": "2025-05-08T08:22:03-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, what are we pinning today?",
+            "endOffsetMs": 1256680,
+            "endTime": "2025-05-08T08:22:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1255680,
+            "startTime": "2025-05-08T08:22:21-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay, I was in the mood for something yummy and sweet tonight and my kids have been on this smores kick lately. So I was looking on.",
+            "endOffsetMs": 1263680,
+            "endTime": "2025-05-08T08:22:29-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1256680,
+            "startTime": "2025-05-08T08:22:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, what's happening with that?",
+            "endOffsetMs": 1268680,
+            "endTime": "2025-05-08T08:22:34-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1266680,
+            "startTime": "2025-05-08T08:22:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "These amazing smores bars you can make, but they're golden grams. So you get like a version of golden grams or you can get actual golden grams or the healthier ones, whatever you want to get. And you basically make them like you would make rice crispy treats. So you melt marshmallows. Then what they do is they melt the marshmallows, they've mixed up the golden grams, they put them in a tray, then they've mixed in whole marshmallows after it's cooled a little bit and then put chocolate drizzle on top.",
+            "endOffsetMs": 1294680,
+            "endTime": "2025-05-08T08:23:00-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1269680,
+            "startTime": "2025-05-08T08:22:35-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay.",
+            "endOffsetMs": 1295680,
+            "endTime": "2025-05-08T08:23:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1294680,
+            "startTime": "2025-05-08T08:23:00-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So it's these golden grams smores bars. So does that not sound amazing?",
+            "endOffsetMs": 1300680,
+            "endTime": "2025-05-08T08:23:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1295680,
+            "startTime": "2025-05-08T08:23:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I feel like I've seen something similar at um, maybe they have some stuff. They have their little pastries.",
+            "endOffsetMs": 1304680,
+            "endTime": "2025-05-08T08:23:10-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1300680,
+            "startTime": "2025-05-08T08:23:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I've seen them. The fruity pebbles one. I've never seen the golden grams one.",
+            "endOffsetMs": 1309680,
+            "endTime": "2025-05-08T08:23:15-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1305680,
+            "startTime": "2025-05-08T08:23:11-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I I don't know if I've seen the I know they have a fruity pebble um yeah, rice crispy treat type thing which people go nuts for.",
+            "endOffsetMs": 1316680,
+            "endTime": "2025-05-08T08:23:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1309680,
+            "startTime": "2025-05-08T08:23:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So good. Then I got into this whole other part of the Pinterest on smores and they did like a smores trail mix and it's like a golden gram the golden bears, golden grams. I what do they call them?",
+            "endOffsetMs": 1326680,
+            "endTime": "2025-05-08T08:23:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1316680,
+            "startTime": "2025-05-08T08:23:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, golden grams, the little what are the little teddy grams?",
+            "endOffsetMs": 1330680,
+            "endTime": "2025-05-08T08:23:36-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1327680,
+            "startTime": "2025-05-08T08:23:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Teddy grams. The little bears. You get the cinnamon ones, you get chocolate chips, you get like little chocolate, you know, they have like the chocolate cereal, but you could do really whatever. So it's just essentially a cinnamon chocolate and the marshmallow. But anyway, you could do like smores trail mix that looks absolutely wonderful. Anyways, if you're all smored up, I got some ideas for you also experimenting with smores like you could put Reese in there instead of Hershey's. It's really good. You ever done that?",
+            "endOffsetMs": 1355680,
+            "endTime": "2025-05-08T08:24:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1331680,
+            "startTime": "2025-05-08T08:23:37-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about a prize and s'mores bars and trail mix recipes found on Pinterest, including suggestions for variations.",
+            "type": "heading3"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 1355681,
+            "endTime": "2025-05-08T08:24:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1355680,
+            "startTime": "2025-05-08T08:24:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You get smores like when you're making them at the campfire, instead of the chocolate bar, you put a smore, I mean, you put a Reese in there.",
+            "endOffsetMs": 1362680,
+            "endTime": "2025-05-08T08:24:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1356681,
+            "startTime": "2025-05-08T08:24:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh.",
+            "endOffsetMs": 1362681,
+            "endTime": "2025-05-08T08:24:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1362680,
+            "startTime": "2025-05-08T08:24:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's it's so good. I'll put all the smores up online for you today.",
+            "endOffsetMs": 1368680,
+            "endTime": "2025-05-08T08:24:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1363681,
+            "startTime": "2025-05-08T08:24:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I want some more of that news.",
+            "endOffsetMs": 1369680,
+            "endTime": "2025-05-08T08:24:15-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1368680,
+            "startTime": "2025-05-08T08:24:14-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Right? You want to stuff? It's on Pinterest.",
+            "endOffsetMs": 1371680,
+            "endTime": "2025-05-08T08:24:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1369680,
+            "startTime": "2025-05-08T08:24:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "On Pinterest. keyword at 20750 on air.",
+            "endOffsetMs": 1373890,
+            "endTime": "2025-05-08T08:24:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1370890,
+            "startTime": "2025-05-08T08:24:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Win these custom beach towels from the t-shirt guy.",
+            "endOffsetMs": 1376890,
+            "endTime": "2025-05-08T08:24:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1373890,
+            "startTime": "2025-05-08T08:24:19-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "A radio advertisement for custom beach towels.",
+            "type": "heading3"
+          },
+          {
+            "content": "Please fasten passenger seatbelts.",
+            "endOffsetMs": 1413890,
+            "endTime": "2025-05-08T08:24:59-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1411890,
+            "startTime": "2025-05-08T08:24:57-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "A brief goodbye.",
+            "type": "heading3"
+          },
+          {
+            "content": "Bye. Bye.",
+            "endOffsetMs": 1420890,
+            "endTime": "2025-05-08T08:25:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 1419890,
+            "startTime": "2025-05-08T08:25:05-04:00",
+            "type": "blockquote"
+          }
+        ],
+        "id": "kSpd081KovgfDEw1vNBl",
+        "title": "Conversation about closing the door and a missing wallet.",
+        "startTime": "2025-05-08T08:01:25-04:00",
+        "endTime": "2025-05-08T08:25:06-04:00"
+      },
+      {
+        "contents": [
+          {
+            "content": "Conversation about coffee mugs, cleaning, and making coffee.",
+            "type": "heading1"
+          },
+          {
+            "content": "Searching for a missing coffee mug top.",
+            "type": "heading3"
+          },
+          {
+            "content": "I have no coffee mugs.",
+            "endOffsetMs": 1000,
+            "endTime": "2025-05-08T07:53:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 0,
+            "startTime": "2025-05-08T07:53:37-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'll I'll be done in a second. I'm taking some medicine, just a minute.",
+            "endOffsetMs": 33000,
+            "endTime": "2025-05-08T07:54:10-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 30000,
+            "startTime": "2025-05-08T07:54:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "finished everything. Good job.",
+            "endOffsetMs": 99000,
+            "endTime": "2025-05-08T07:55:16-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 97000,
+            "startTime": "2025-05-08T07:55:14-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The other one? Yeah. Okay.",
+            "endOffsetMs": 104000,
+            "endTime": "2025-05-08T07:55:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 102000,
+            "startTime": "2025-05-08T07:55:19-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Cleaning Discussions",
+            "type": "heading2"
+          },
+          {
+            "content": "Discussing a cleaning issue involving Coke and coffee.",
+            "type": "heading3"
+          },
+          {
+            "content": "So do somebody in the process added Coke. So you guys need to pay attention because if people don't know how to clean and then I have to do it.",
+            "endOffsetMs": 117000,
+            "endTime": "2025-05-08T07:55:34-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 104000,
+            "startTime": "2025-05-08T07:55:21-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay. Yeah. Right.",
+            "endOffsetMs": 118000,
+            "endTime": "2025-05-08T07:55:35-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 117000,
+            "startTime": "2025-05-08T07:55:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay. Yeah. I saw it and I threw it in the trash.",
+            "endOffsetMs": 121000,
+            "endTime": "2025-05-08T07:55:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 118000,
+            "startTime": "2025-05-08T07:55:35-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No, I I put it in the sink.",
+            "endOffsetMs": 123000,
+            "endTime": "2025-05-08T07:55:40-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 121000,
+            "startTime": "2025-05-08T07:55:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Right, that's what I mean. I saw it in the sink.",
+            "endOffsetMs": 125000,
+            "endTime": "2025-05-08T07:55:42-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 123000,
+            "startTime": "2025-05-08T07:55:40-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Can you clean that area that is full of coffee?",
+            "endOffsetMs": 129000,
+            "endTime": "2025-05-08T07:55:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 126000,
+            "startTime": "2025-05-08T07:55:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 129001,
+            "endTime": "2025-05-08T07:55:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 129000,
+            "startTime": "2025-05-08T07:55:46-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "come here.",
+            "endOffsetMs": 130002,
+            "endTime": "2025-05-08T07:55:47-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 130001,
+            "startTime": "2025-05-08T07:55:47-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So, I'm looking for my top. Is this your top?",
+            "endOffsetMs": 136000,
+            "endTime": "2025-05-08T07:55:53-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 133002,
+            "startTime": "2025-05-08T07:55:50-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That goes, don't drink it from there.",
+            "endOffsetMs": 141000,
+            "endTime": "2025-05-08T07:55:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 138000,
+            "startTime": "2025-05-08T07:55:55-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's good. It's good.",
+            "endOffsetMs": 146000,
+            "endTime": "2025-05-08T07:56:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 145000,
+            "startTime": "2025-05-08T07:56:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Is this one's bad or the other one?",
+            "endOffsetMs": 148000,
+            "endTime": "2025-05-08T07:56:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 146000,
+            "startTime": "2025-05-08T07:56:03-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's good, it's good.",
+            "endOffsetMs": 151000,
+            "endTime": "2025-05-08T07:56:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 150000,
+            "startTime": "2025-05-08T07:56:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, here.",
+            "endOffsetMs": 151001,
+            "endTime": "2025-05-08T07:56:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 151000,
+            "startTime": "2025-05-08T07:56:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So this",
+            "endOffsetMs": 154000,
+            "endTime": "2025-05-08T07:56:11-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 153001,
+            "startTime": "2025-05-08T07:56:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No, that one no. Here.",
+            "endOffsetMs": 156000,
+            "endTime": "2025-05-08T07:56:13-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 154000,
+            "startTime": "2025-05-08T07:56:11-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I I don't know what this what do you whatever.",
+            "endOffsetMs": 161000,
+            "endTime": "2025-05-08T07:56:18-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 158000,
+            "startTime": "2025-05-08T07:56:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That one is yours and is missing my top that goes here.",
+            "endOffsetMs": 164000,
+            "endTime": "2025-05-08T07:56:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 161000,
+            "startTime": "2025-05-08T07:56:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's good.",
+            "endOffsetMs": 165001,
+            "endTime": "2025-05-08T07:56:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 165000,
+            "startTime": "2025-05-08T07:56:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'm not good.",
+            "endOffsetMs": 168000,
+            "endTime": "2025-05-08T07:56:25-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 166001,
+            "startTime": "2025-05-08T07:56:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "If I knew where it was, I would give it to you.",
+            "endOffsetMs": 170000,
+            "endTime": "2025-05-08T07:56:27-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 168000,
+            "startTime": "2025-05-08T07:56:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Well, don't take mine, please.",
+            "endOffsetMs": 172000,
+            "endTime": "2025-05-08T07:56:29-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 170000,
+            "startTime": "2025-05-08T07:56:27-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay, I won't. Is that maybe here? Maybe that one?",
+            "endOffsetMs": 175000,
+            "endTime": "2025-05-08T07:56:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 172000,
+            "startTime": "2025-05-08T07:56:29-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, yeah.",
+            "endOffsetMs": 176001,
+            "endTime": "2025-05-08T07:56:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 176000,
+            "startTime": "2025-05-08T07:56:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay. See, I didn't take it silly.",
+            "endOffsetMs": 179000,
+            "endTime": "2025-05-08T07:56:36-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 177001,
+            "startTime": "2025-05-08T07:56:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Well, I didn't see it. I'm sorry.",
+            "endOffsetMs": 181000,
+            "endTime": "2025-05-08T07:56:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 179000,
+            "startTime": "2025-05-08T07:56:36-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Kitchen Chores",
+            "type": "heading2"
+          },
+          {
+            "content": "Cleaning dishes and making coffee.",
+            "type": "heading3"
+          },
+          {
+            "content": "Who put more dishes in the sink?",
+            "endOffsetMs": 183000,
+            "endTime": "2025-05-08T07:56:40-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 181000,
+            "startTime": "2025-05-08T07:56:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Mm, I don't know. Can you try this? I think it's Can you clean that, please?",
+            "endOffsetMs": 191000,
+            "endTime": "2025-05-08T07:56:48-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 187000,
+            "startTime": "2025-05-08T07:56:44-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yes. Can you I need space.",
+            "endOffsetMs": 193000,
+            "endTime": "2025-05-08T07:56:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 191000,
+            "startTime": "2025-05-08T07:56:48-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "This one is just special. We were but not like that. Tastes like No, it's it's milk.",
+            "endOffsetMs": 205000,
+            "endTime": "2025-05-08T07:57:02-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 200000,
+            "startTime": "2025-05-08T07:56:57-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, I thought I saw",
+            "endOffsetMs": 207000,
+            "endTime": "2025-05-08T07:57:04-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 206000,
+            "startTime": "2025-05-08T07:57:03-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's milk, it's dirty.",
+            "endOffsetMs": 209000,
+            "endTime": "2025-05-08T07:57:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 208000,
+            "startTime": "2025-05-08T07:57:05-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay.",
+            "endOffsetMs": 210001,
+            "endTime": "2025-05-08T07:57:07-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 210000,
+            "startTime": "2025-05-08T07:57:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I don't know what you do always in the morning and it's always milk in there.",
+            "endOffsetMs": 214000,
+            "endTime": "2025-05-08T07:57:11-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 210001,
+            "startTime": "2025-05-08T07:57:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You need to clean it with the towel.",
+            "endOffsetMs": 217000,
+            "endTime": "2025-05-08T07:57:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 215000,
+            "startTime": "2025-05-08T07:57:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, I will do that first. I'm going to do that. Then I'm going to give you space because it looks like you need space over there.",
+            "endOffsetMs": 223000,
+            "endTime": "2025-05-08T07:57:20-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 217000,
+            "startTime": "2025-05-08T07:57:14-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Can you turn off please?",
+            "endOffsetMs": 225000,
+            "endTime": "2025-05-08T07:57:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 223000,
+            "startTime": "2025-05-08T07:57:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "When you finish cleaning.",
+            "endOffsetMs": 226001,
+            "endTime": "2025-05-08T07:57:23-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 226000,
+            "startTime": "2025-05-08T07:57:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Well, I don't know.",
+            "endOffsetMs": 229000,
+            "endTime": "2025-05-08T07:57:26-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 228001,
+            "startTime": "2025-05-08T07:57:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "If you think it's bad.",
+            "endOffsetMs": 231000,
+            "endTime": "2025-05-08T07:57:28-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 229000,
+            "startTime": "2025-05-08T07:57:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It has a You don't like the taste of it.",
+            "endOffsetMs": 233000,
+            "endTime": "2025-05-08T07:57:30-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 231000,
+            "startTime": "2025-05-08T07:57:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You don't like the taste?",
+            "endOffsetMs": 234000,
+            "endTime": "2025-05-08T07:57:31-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 233000,
+            "startTime": "2025-05-08T07:57:30-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Clean there, please.",
+            "endOffsetMs": 236000,
+            "endTime": "2025-05-08T07:57:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 235000,
+            "startTime": "2025-05-08T07:57:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Well, which thing do you want me to do?",
+            "endOffsetMs": 238000,
+            "endTime": "2025-05-08T07:57:35-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 236000,
+            "startTime": "2025-05-08T07:57:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "First clean because I need to make my coffee.",
+            "endOffsetMs": 241000,
+            "endTime": "2025-05-08T07:57:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 239000,
+            "startTime": "2025-05-08T07:57:36-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And I hate to leave it see it dirty.",
+            "endOffsetMs": 245000,
+            "endTime": "2025-05-08T07:57:42-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 243000,
+            "startTime": "2025-05-08T07:57:40-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I'll be there in a few seconds.",
+            "endOffsetMs": 253000,
+            "endTime": "2025-05-08T07:57:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 252000,
+            "startTime": "2025-05-08T07:57:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Get some water, please. And the towel.",
+            "endOffsetMs": 256206,
+            "endTime": "2025-05-08T07:57:53-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 252206,
+            "startTime": "2025-05-08T07:57:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Let's dry.",
+            "endOffsetMs": 259206,
+            "endTime": "2025-05-08T07:57:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 258206,
+            "startTime": "2025-05-08T07:57:55-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Dry me gonna clean it.",
+            "endOffsetMs": 263206,
+            "endTime": "2025-05-08T07:58:00-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 261206,
+            "startTime": "2025-05-08T07:57:58-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about drying and cleaning.",
+            "type": "heading3"
+          },
+          {
+            "content": "Today you working, right?",
+            "endOffsetMs": 274206,
+            "endTime": "2025-05-08T07:58:11-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 273206,
+            "startTime": "2025-05-08T07:58:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Work and Coffee Mug Talk",
+            "type": "heading2"
+          },
+          {
+            "content": "Conversation about work and coworkers.",
+            "type": "heading3"
+          },
+          {
+            "content": "Mhm.",
+            "endOffsetMs": 275207,
+            "endTime": "2025-05-08T07:58:12-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 275206,
+            "startTime": "2025-05-08T07:58:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "How was your day yesterday with?",
+            "endOffsetMs": 278206,
+            "endTime": "2025-05-08T07:58:15-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 275207,
+            "startTime": "2025-05-08T07:58:12-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It was it was good.",
+            "endOffsetMs": 281206,
+            "endTime": "2025-05-08T07:58:18-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 279206,
+            "startTime": "2025-05-08T07:58:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "She was okay with you?",
+            "endOffsetMs": 282206,
+            "endTime": "2025-05-08T07:58:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 281206,
+            "startTime": "2025-05-08T07:58:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 283207,
+            "endTime": "2025-05-08T07:58:20-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 283206,
+            "startTime": "2025-05-08T07:58:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So, she was complaining because I need to call her hour to give it to.",
+            "endOffsetMs": 293206,
+            "endTime": "2025-05-08T07:58:30-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 286207,
+            "startTime": "2025-05-08T07:58:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And then they took her in the office and she was very upset because she doesn't want to be in the office.",
+            "endOffsetMs": 299206,
+            "endTime": "2025-05-08T07:58:36-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 294206,
+            "startTime": "2025-05-08T07:58:31-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And in one month she's gone, but I need to change her schedule.",
+            "endOffsetMs": 305206,
+            "endTime": "2025-05-08T07:58:42-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 302206,
+            "startTime": "2025-05-08T07:58:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "There's not people, a lot of people are quitting, so a lot of people.",
+            "endOffsetMs": 311206,
+            "endTime": "2025-05-08T07:58:48-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 306206,
+            "startTime": "2025-05-08T07:58:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Anybody know where might offer to this thing?",
+            "endOffsetMs": 314206,
+            "endTime": "2025-05-08T07:58:51-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 312206,
+            "startTime": "2025-05-08T07:58:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Not that. Oh, this is this is good. It looks weird.",
+            "endOffsetMs": 322206,
+            "endTime": "2025-05-08T07:58:59-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 318206,
+            "startTime": "2025-05-08T07:58:55-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It works.",
+            "endOffsetMs": 325207,
+            "endTime": "2025-05-08T07:59:02-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 325206,
+            "startTime": "2025-05-08T07:59:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So there's a bunch of people quitting at the way.",
+            "endOffsetMs": 333206,
+            "endTime": "2025-05-08T07:59:10-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 330207,
+            "startTime": "2025-05-08T07:59:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 333207,
+            "endTime": "2025-05-08T07:59:10-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 333206,
+            "startTime": "2025-05-08T07:59:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "There's a lot of people so I the process is stress.",
+            "endOffsetMs": 338206,
+            "endTime": "2025-05-08T07:59:15-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 334207,
+            "startTime": "2025-05-08T07:59:11-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And why are they quitting, do you think?",
+            "endOffsetMs": 340206,
+            "endTime": "2025-05-08T07:59:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 338206,
+            "startTime": "2025-05-08T07:59:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Maybe because of the pay.",
+            "endOffsetMs": 342206,
+            "endTime": "2025-05-08T07:59:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 340206,
+            "startTime": "2025-05-08T07:59:17-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Come on, you want to go for $10 an hour.",
+            "endOffsetMs": 344206,
+            "endTime": "2025-05-08T07:59:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 342206,
+            "startTime": "2025-05-08T07:59:19-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's what I was wondering if maybe.",
+            "endOffsetMs": 345206,
+            "endTime": "2025-05-08T07:59:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 344206,
+            "startTime": "2025-05-08T07:59:21-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I think that's that's the worst play pay.",
+            "endOffsetMs": 348206,
+            "endTime": "2025-05-08T07:59:25-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 346206,
+            "startTime": "2025-05-08T07:59:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, yeah.",
+            "endOffsetMs": 349207,
+            "endTime": "2025-05-08T07:59:26-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 349206,
+            "startTime": "2025-05-08T07:59:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And she has to suck it up, but she doesn't care because when she has to be there for all the Can you wash it with the sponge, please?",
+            "endOffsetMs": 362206,
+            "endTime": "2025-05-08T07:59:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 354207,
+            "startTime": "2025-05-08T07:59:31-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yes.",
+            "endOffsetMs": 363206,
+            "endTime": "2025-05-08T07:59:40-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 362206,
+            "startTime": "2025-05-08T07:59:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Washing dishes.",
+            "type": "heading3"
+          },
+          {
+            "content": "With the other one. The one that soap.",
+            "endOffsetMs": 366206,
+            "endTime": "2025-05-08T07:59:43-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 364206,
+            "startTime": "2025-05-08T07:59:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, see what this.",
+            "endOffsetMs": 368206,
+            "endTime": "2025-05-08T07:59:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 367206,
+            "startTime": "2025-05-08T07:59:44-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about work and coworkers.",
+            "type": "heading3"
+          },
+          {
+            "content": "And they said what you drink it.",
+            "endOffsetMs": 371206,
+            "endTime": "2025-05-08T07:59:48-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 370206,
+            "startTime": "2025-05-08T07:59:47-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 372207,
+            "endTime": "2025-05-08T07:59:49-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 372206,
+            "startTime": "2025-05-08T07:59:49-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Um, so I think it has to do with no paying well.",
+            "endOffsetMs": 381206,
+            "endTime": "2025-05-08T07:59:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 377207,
+            "startTime": "2025-05-08T07:59:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The thing is that most of the time like like yesterday.",
+            "endOffsetMs": 389206,
+            "endTime": "2025-05-08T08:00:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 385206,
+            "startTime": "2025-05-08T08:00:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Sorry, say that again.",
+            "endOffsetMs": 390206,
+            "endTime": "2025-05-08T08:00:07-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 389206,
+            "startTime": "2025-05-08T08:00:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Most of the time there's not too much to do. Like yesterday there was not too many customers so I I was outside sitting in the chair.",
+            "endOffsetMs": 396206,
+            "endTime": "2025-05-08T08:00:13-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 390206,
+            "startTime": "2025-05-08T08:00:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Uh-huh.",
+            "endOffsetMs": 397207,
+            "endTime": "2025-05-08T08:00:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 397206,
+            "startTime": "2025-05-08T08:00:14-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So maybe they're also having financial issues.",
+            "endOffsetMs": 404206,
+            "endTime": "2025-05-08T08:00:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 401207,
+            "startTime": "2025-05-08T08:00:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, and they don't have a gym or anything, do they? Yeah, typical.",
+            "endOffsetMs": 411206,
+            "endTime": "2025-05-08T08:00:28-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 407206,
+            "startTime": "2025-05-08T08:00:24-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "They have a daycare upstairs and all their stuff. But it's different from the pool.",
+            "endOffsetMs": 416206,
+            "endTime": "2025-05-08T08:00:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 411206,
+            "startTime": "2025-05-08T08:00:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 416207,
+            "endTime": "2025-05-08T08:00:33-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 416206,
+            "startTime": "2025-05-08T08:00:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So there's a lot of um kids that Well, a lot of people wants to get paid. Doesn't matter if you have nothing to do with your.",
+            "endOffsetMs": 425206,
+            "endTime": "2025-05-08T08:00:42-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 417207,
+            "startTime": "2025-05-08T08:00:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Sure, of course. Yeah. This was, you lift this up.",
+            "endOffsetMs": 429206,
+            "endTime": "2025-05-08T08:00:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 425206,
+            "startTime": "2025-05-08T08:00:42-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Um, okay, wait a minute. One of these three was the bad one.",
+            "endOffsetMs": 435206,
+            "endTime": "2025-05-08T08:00:52-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 431206,
+            "startTime": "2025-05-08T08:00:48-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussion about the origin of the coffee mugs.",
+            "type": "heading3"
+          },
+          {
+            "content": "This big one?",
+            "endOffsetMs": 438206,
+            "endTime": "2025-05-08T08:00:55-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 437206,
+            "startTime": "2025-05-08T08:00:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay, okay. But this one's fine.",
+            "endOffsetMs": 441206,
+            "endTime": "2025-05-08T08:00:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 439206,
+            "startTime": "2025-05-08T08:00:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I get I get them.",
+            "endOffsetMs": 443206,
+            "endTime": "2025-05-08T08:01:00-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 441206,
+            "startTime": "2025-05-08T08:00:58-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Sometimes I think this came from Food Lion. Sometimes the food.",
+            "endOffsetMs": 448206,
+            "endTime": "2025-05-08T08:01:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 444206,
+            "startTime": "2025-05-08T08:01:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No, it's not Food Lion, it's uh Walmart.",
+            "endOffsetMs": 451206,
+            "endTime": "2025-05-08T08:01:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 449206,
+            "startTime": "2025-05-08T08:01:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, okay. Cuz I remember maybe it was the Food Lion one, but.",
+            "endOffsetMs": 457206,
+            "endTime": "2025-05-08T08:01:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 452206,
+            "startTime": "2025-05-08T08:01:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Doesn't smell that.",
+            "endOffsetMs": 460206,
+            "endTime": "2025-05-08T08:01:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 459206,
+            "startTime": "2025-05-08T08:01:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Comments on the smell of the mug.",
+            "type": "heading3"
+          },
+          {
+            "content": "No, it smells a little.",
+            "endOffsetMs": 462206,
+            "endTime": "2025-05-08T08:01:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 460206,
+            "startTime": "2025-05-08T08:01:17-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Not bad, but it smells like nut milk.",
+            "endOffsetMs": 467206,
+            "endTime": "2025-05-08T08:01:24-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 463206,
+            "startTime": "2025-05-08T08:01:20-04:00",
+            "type": "blockquote"
+          }
+        ],
+        "id": "ARAlQN2nRG5rltBh0cLq",
+        "title": "Conversation about coffee mugs, cleaning, and making coffee.",
+        "startTime": "2025-05-08T07:53:37-04:00",
+        "endTime": "2025-05-08T08:01:24-04:00"
+      },
+      {
+        "contents": [
+          {
+            "content": "Conversation about allergies and allergy medicine.",
+            "type": "heading1"
+          },
+          {
+            "content": "Allergy Medication Discussion",
+            "type": "heading2"
+          },
+          {
+            "content": "Discussing high pollen count and existing allergy medicine.",
+            "type": "heading3"
+          },
+          {
+            "content": "Russell, pollen count today is super high again.",
+            "endOffsetMs": 3000,
+            "endTime": "2025-05-08T07:41:05-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 0,
+            "startTime": "2025-05-08T07:41:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh.",
+            "endOffsetMs": 4000,
+            "endTime": "2025-05-08T07:41:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 3000,
+            "startTime": "2025-05-08T07:41:05-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I know, and it's bugging the hell out of me already.",
+            "endOffsetMs": 7000,
+            "endTime": "2025-05-08T07:41:09-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 5000,
+            "startTime": "2025-05-08T07:41:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Hey.",
+            "endOffsetMs": 9001,
+            "endTime": "2025-05-08T07:41:11-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 9000,
+            "startTime": "2025-05-08T07:41:11-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Why?",
+            "endOffsetMs": 14002,
+            "endTime": "2025-05-08T07:41:16-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 14001,
+            "startTime": "2025-05-08T07:41:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 15000,
+            "endTime": "2025-05-08T07:41:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 14002,
+            "startTime": "2025-05-08T07:41:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Are you any old California?",
+            "endOffsetMs": 22000,
+            "endTime": "2025-05-08T07:41:24-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 21000,
+            "startTime": "2025-05-08T07:41:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 23001,
+            "endTime": "2025-05-08T07:41:25-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 23000,
+            "startTime": "2025-05-08T07:41:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No?",
+            "endOffsetMs": 25000,
+            "endTime": "2025-05-08T07:41:27-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 24001,
+            "startTime": "2025-05-08T07:41:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Are you any old California?",
+            "endOffsetMs": 26000,
+            "endTime": "2025-05-08T07:41:28-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 25000,
+            "startTime": "2025-05-08T07:41:27-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 27001,
+            "endTime": "2025-05-08T07:41:29-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 27000,
+            "startTime": "2025-05-08T07:41:29-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Who's any old California?",
+            "endOffsetMs": 29000,
+            "endTime": "2025-05-08T07:41:31-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 27001,
+            "startTime": "2025-05-08T07:41:29-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussing nasal sprays and offering Flonase.",
+            "type": "heading3"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 73001,
+            "endTime": "2025-05-08T07:42:15-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 73000,
+            "startTime": "2025-05-08T07:42:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We need, we need uh, one of those nasal sprays that has uh, that uh, allergy medication in it.",
+            "endOffsetMs": 222000,
+            "endTime": "2025-05-08T07:44:44-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 213001,
+            "startTime": "2025-05-08T07:44:35-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I have that. That's what Flonase is. That's what",
+            "endOffsetMs": 227000,
+            "endTime": "2025-05-08T07:44:49-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 223000,
+            "startTime": "2025-05-08T07:44:45-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "allergy medication?",
+            "endOffsetMs": 229000,
+            "endTime": "2025-05-08T07:44:51-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 228000,
+            "startTime": "2025-05-08T07:44:50-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 230000,
+            "endTime": "2025-05-08T07:44:52-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 229000,
+            "startTime": "2025-05-08T07:44:51-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's what Afrin and Flonase are. I buy both of them.",
+            "endOffsetMs": 234000,
+            "endTime": "2025-05-08T07:44:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 231000,
+            "startTime": "2025-05-08T07:44:53-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh.",
+            "endOffsetMs": 235001,
+            "endTime": "2025-05-08T07:44:57-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 235000,
+            "startTime": "2025-05-08T07:44:57-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's not just water or saline.",
+            "endOffsetMs": 239000,
+            "endTime": "2025-05-08T07:45:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 237001,
+            "startTime": "2025-05-08T07:44:59-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I don't know what you have.",
+            "endOffsetMs": 245000,
+            "endTime": "2025-05-08T07:45:07-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 244000,
+            "startTime": "2025-05-08T07:45:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, mine just has saline.",
+            "endOffsetMs": 263000,
+            "endTime": "2025-05-08T07:45:25-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 262000,
+            "startTime": "2025-05-08T07:45:24-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Mine just has saline.",
+            "endOffsetMs": 267000,
+            "endTime": "2025-05-08T07:45:29-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 266000,
+            "startTime": "2025-05-08T07:45:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, yeah, yeah, yeah.",
+            "endOffsetMs": 270000,
+            "endTime": "2025-05-08T07:45:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 269000,
+            "startTime": "2025-05-08T07:45:31-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 270001,
+            "endTime": "2025-05-08T07:45:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 270000,
+            "startTime": "2025-05-08T07:45:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No, that that's just saline.",
+            "endOffsetMs": 272000,
+            "endTime": "2025-05-08T07:45:34-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 271001,
+            "startTime": "2025-05-08T07:45:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Let me see if I have extras. I don't think I do, but I'll give you what I have.",
+            "endOffsetMs": 278000,
+            "endTime": "2025-05-08T07:45:40-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 273000,
+            "startTime": "2025-05-08T07:45:35-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, so there's two, well, this is what I have for now. You can keep that and I'll get some I have another thing. So that one you can have.",
+            "endOffsetMs": 332000,
+            "endTime": "2025-05-08T07:46:34-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 321000,
+            "startTime": "2025-05-08T07:46:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussing Claritin and other allergy pills.",
+            "type": "heading3"
+          },
+          {
+            "content": "Also, you have Claritin or something?",
+            "endOffsetMs": 341000,
+            "endTime": "2025-05-08T07:46:43-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 339000,
+            "startTime": "2025-05-08T07:46:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Russell?",
+            "endOffsetMs": 343001,
+            "endTime": "2025-05-08T07:46:45-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 343000,
+            "startTime": "2025-05-08T07:46:45-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 344000,
+            "endTime": "2025-05-08T07:46:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 343001,
+            "startTime": "2025-05-08T07:46:45-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Do you have Claritin or something like that? A pill?",
+            "endOffsetMs": 347000,
+            "endTime": "2025-05-08T07:46:49-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 344000,
+            "startTime": "2025-05-08T07:46:46-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 348001,
+            "endTime": "2025-05-08T07:46:50-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 348000,
+            "startTime": "2025-05-08T07:46:50-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 349000,
+            "endTime": "2025-05-08T07:46:51-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 348001,
+            "startTime": "2025-05-08T07:46:50-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "I have, I have the allergy pill though.",
+            "endOffsetMs": 352000,
+            "endTime": "2025-05-08T07:46:54-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 349000,
+            "startTime": "2025-05-08T07:46:51-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's what I mean. That's what Claritin is. You have some kind of allergy pills. That's what I'm asking.",
+            "endOffsetMs": 356000,
+            "endTime": "2025-05-08T07:46:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 352000,
+            "startTime": "2025-05-08T07:46:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Further discussion about Flonase and reminding Benetton about the time.",
+            "type": "heading3"
+          },
+          {
+            "content": "Yeah. Yeah, that one's not so great.",
+            "endOffsetMs": 366000,
+            "endTime": "2025-05-08T07:47:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 364000,
+            "startTime": "2025-05-08T07:47:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The Flonase is all right. That one's not so great.",
+            "endOffsetMs": 371000,
+            "endTime": "2025-05-08T07:47:13-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 368000,
+            "startTime": "2025-05-08T07:47:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "But it will help.",
+            "endOffsetMs": 375000,
+            "endTime": "2025-05-08T07:47:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 374000,
+            "startTime": "2025-05-08T07:47:16-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 376001,
+            "endTime": "2025-05-08T07:47:18-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 376000,
+            "startTime": "2025-05-08T07:47:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Benetton, we have like 10 minutes, sweetie.",
+            "endOffsetMs": 381000,
+            "endTime": "2025-05-08T07:47:23-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 378001,
+            "startTime": "2025-05-08T07:47:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 381001,
+            "endTime": "2025-05-08T07:47:23-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 381000,
+            "startTime": "2025-05-08T07:47:23-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Eat.",
+            "endOffsetMs": 383000,
+            "endTime": "2025-05-08T07:47:25-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 382001,
+            "startTime": "2025-05-08T07:47:24-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 383001,
+            "endTime": "2025-05-08T07:47:25-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 383000,
+            "startTime": "2025-05-08T07:47:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Initial Interaction",
+            "type": "heading2"
+          },
+          {
+            "content": "Expressing gratitude and greeting Benetton.",
+            "type": "heading3"
+          },
+          {
+            "content": "Thank you.",
+            "endOffsetMs": 391002,
+            "endTime": "2025-05-08T07:47:33-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 391001,
+            "startTime": "2025-05-08T07:47:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 392000,
+            "endTime": "2025-05-08T07:47:34-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 391002,
+            "startTime": "2025-05-08T07:47:33-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Morning greetings and a request to purchase more allergy medicine.",
+            "type": "heading3"
+          },
+          {
+            "content": "Benetton. Good morning.",
+            "endOffsetMs": 401000,
+            "endTime": "2025-05-08T07:47:43-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 399000,
+            "startTime": "2025-05-08T07:47:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Hi.",
+            "endOffsetMs": 402001,
+            "endTime": "2025-05-08T07:47:44-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 402000,
+            "startTime": "2025-05-08T07:47:44-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Hi, grape.",
+            "endOffsetMs": 404000,
+            "endTime": "2025-05-08T07:47:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 403001,
+            "startTime": "2025-05-08T07:47:45-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Good morning. Good morning, grape.",
+            "endOffsetMs": 409000,
+            "endTime": "2025-05-08T07:47:51-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 406000,
+            "startTime": "2025-05-08T07:47:48-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussing the purchase of allergy medicine, specifically pills versus nasal spray.",
+            "type": "heading3"
+          },
+          {
+            "content": "Um, I'd like to purchase some more allergy uh medicine.",
+            "endOffsetMs": 416203,
+            "endTime": "2025-05-08T07:47:59-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 412203,
+            "startTime": "2025-05-08T07:47:55-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Uh there's the bottle of allergy medicine there.",
+            "endOffsetMs": 420203,
+            "endTime": "2025-05-08T07:48:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 417203,
+            "startTime": "2025-05-08T07:48:00-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Where? In the cabinet?",
+            "endOffsetMs": 422203,
+            "endTime": "2025-05-08T07:48:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 420203,
+            "startTime": "2025-05-08T07:48:03-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, where I put the medications in 5G technology.",
+            "endOffsetMs": 425203,
+            "endTime": "2025-05-08T07:48:08-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 422203,
+            "startTime": "2025-05-08T07:48:05-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay.",
+            "endOffsetMs": 426203,
+            "endTime": "2025-05-08T07:48:09-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 425203,
+            "startTime": "2025-05-08T07:48:08-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, I'll just",
+            "endOffsetMs": 430203,
+            "endTime": "2025-05-08T07:48:13-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 428203,
+            "startTime": "2025-05-08T07:48:11-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "like 90 pills or something like that.",
+            "endOffsetMs": 432203,
+            "endTime": "2025-05-08T07:48:15-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 430203,
+            "startTime": "2025-05-08T07:48:13-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, I was talking about the spray.",
+            "endOffsetMs": 434203,
+            "endTime": "2025-05-08T07:48:17-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 432203,
+            "startTime": "2025-05-08T07:48:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "There's some spray there too. Just check that.",
+            "endOffsetMs": 438203,
+            "endTime": "2025-05-08T07:48:21-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 435203,
+            "startTime": "2025-05-08T07:48:18-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 439203,
+            "endTime": "2025-05-08T07:48:22-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 438203,
+            "startTime": "2025-05-08T07:48:21-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 440203,
+            "endTime": "2025-05-08T07:48:23-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 439203,
+            "startTime": "2025-05-08T07:48:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Locating and discussing the remaining allergy medicine.",
+            "type": "heading3"
+          },
+          {
+            "content": "Oh gosh, ow.",
+            "endOffsetMs": 445203,
+            "endTime": "2025-05-08T07:48:28-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 444203,
+            "startTime": "2025-05-08T07:48:27-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "People are hesitant to me. Holy crap.",
+            "endOffsetMs": 449203,
+            "endTime": "2025-05-08T07:48:32-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 447203,
+            "startTime": "2025-05-08T07:48:30-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, there's allergy pills.",
+            "endOffsetMs": 456203,
+            "endTime": "2025-05-08T07:48:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 454203,
+            "startTime": "2025-05-08T07:48:37-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Sure of the thing. Oh, there's yeah. Oh, but this is empty.",
+            "endOffsetMs": 461203,
+            "endTime": "2025-05-08T07:48:44-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 456203,
+            "startTime": "2025-05-08T07:48:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And this is the allergy relief.",
+            "endOffsetMs": 463203,
+            "endTime": "2025-05-08T07:48:46-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 461203,
+            "startTime": "2025-05-08T07:48:44-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah. Yeah, so this is basically what's called Claritin is the. So this one has a little itty bitty bit in it.",
+            "endOffsetMs": 471203,
+            "endTime": "2025-05-08T07:48:54-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 463203,
+            "startTime": "2025-05-08T07:48:46-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Just FYI.",
+            "endOffsetMs": 473203,
+            "endTime": "2025-05-08T07:48:56-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 472203,
+            "startTime": "2025-05-08T07:48:55-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay. Thank you.",
+            "endOffsetMs": 475203,
+            "endTime": "2025-05-08T07:48:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 473203,
+            "startTime": "2025-05-08T07:48:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "And then that's saline, whatever.",
+            "endOffsetMs": 480203,
+            "endTime": "2025-05-08T07:49:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 478203,
+            "startTime": "2025-05-08T07:49:01-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah.",
+            "endOffsetMs": 481204,
+            "endTime": "2025-05-08T07:49:04-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 481203,
+            "startTime": "2025-05-08T07:49:04-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Okay.",
+            "endOffsetMs": 483203,
+            "endTime": "2025-05-08T07:49:06-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 482204,
+            "startTime": "2025-05-08T07:49:05-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh my gosh. That is really bad.",
+            "endOffsetMs": 486203,
+            "endTime": "2025-05-08T07:49:09-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 483203,
+            "startTime": "2025-05-08T07:49:06-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah, so there's no such thing. You can take like two of these.",
+            "endOffsetMs": 491203,
+            "endTime": "2025-05-08T07:49:14-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 486203,
+            "startTime": "2025-05-08T07:49:09-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "When I feel that, you know, feel the allergies, I take two of these.",
+            "endOffsetMs": 496203,
+            "endTime": "2025-05-08T07:49:19-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 492203,
+            "startTime": "2025-05-08T07:49:15-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Other",
+            "type": "heading2"
+          },
+          {
+            "content": "Brief, seemingly unrelated comments and a request to be patted.",
+            "type": "heading3"
+          },
+          {
+            "content": "Now you sound like.",
+            "endOffsetMs": 504203,
+            "endTime": "2025-05-08T07:49:27-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 503203,
+            "startTime": "2025-05-08T07:49:26-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Let's eat, right? That's what you say.",
+            "endOffsetMs": 514203,
+            "endTime": "2025-05-08T07:49:37-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 511203,
+            "startTime": "2025-05-08T07:49:34-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Is that what you say?",
+            "endOffsetMs": 515204,
+            "endTime": "2025-05-08T07:49:38-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 515203,
+            "startTime": "2025-05-08T07:49:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Pat you.",
+            "endOffsetMs": 516203,
+            "endTime": "2025-05-08T07:49:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 515204,
+            "startTime": "2025-05-08T07:49:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Huh? Pat me?",
+            "endOffsetMs": 518203,
+            "endTime": "2025-05-08T07:49:41-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 516203,
+            "startTime": "2025-05-08T07:49:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Oh, Pat.",
+            "endOffsetMs": 519203,
+            "endTime": "2025-05-08T07:49:42-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 518203,
+            "startTime": "2025-05-08T07:49:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You're patting me? Yep. Yep.",
+            "endOffsetMs": 522203,
+            "endTime": "2025-05-08T07:49:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 520203,
+            "startTime": "2025-05-08T07:49:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "All right. See you in a minute and we'll be ready to go.",
+            "endOffsetMs": 527203,
+            "endTime": "2025-05-08T07:49:50-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 523203,
+            "startTime": "2025-05-08T07:49:46-04:00",
+            "type": "blockquote"
+          }
+        ],
+        "id": "CzbodIcNkSdyKRBZjyoH",
+        "title": "Conversation about allergies and allergy medicine.",
+        "startTime": "2025-05-08T07:41:02-04:00",
+        "endTime": "2025-05-08T07:49:50-04:00"
+      },
+      {
+        "contents": [
+          {
+            "content": "Brief discussion about milk, followed by encouragement and thanks related to an unknown task.",
+            "type": "heading1"
+          },
+          {
+            "content": "Kitchen and Chores",
+            "type": "heading2"
+          },
+          {
+            "content": "Discussion about milk",
+            "type": "heading3"
+          },
+          {
+            "content": "Good morning.",
+            "endOffsetMs": 3000,
+            "endTime": "2025-05-08T07:35:31-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 0,
+            "startTime": "2025-05-08T07:35:28-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "put some more now.",
+            "endOffsetMs": 7000,
+            "endTime": "2025-05-08T07:35:35-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 4000,
+            "startTime": "2025-05-08T07:35:32-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "put more.",
+            "endOffsetMs": 14000,
+            "endTime": "2025-05-08T07:35:42-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 13000,
+            "startTime": "2025-05-08T07:35:41-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "The milk is fine.",
+            "endOffsetMs": 16000,
+            "endTime": "2025-05-08T07:35:44-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 14000,
+            "startTime": "2025-05-08T07:35:42-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Remember?",
+            "endOffsetMs": 17000,
+            "endTime": "2025-05-08T07:35:45-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 16000,
+            "startTime": "2025-05-08T07:35:44-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Motivation and Support",
+            "type": "heading2"
+          },
+          {
+            "content": "Encouragement and getting back on track",
+            "type": "heading3"
+          },
+          {
+            "content": "I think you're getting going again, you know.",
+            "endOffsetMs": 30000,
+            "endTime": "2025-05-08T07:35:58-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 28000,
+            "startTime": "2025-05-08T07:35:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Then we got distracted.",
+            "endOffsetMs": 32000,
+            "endTime": "2025-05-08T07:36:00-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 31000,
+            "startTime": "2025-05-08T07:35:59-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Task Completion and Appreciation",
+            "type": "heading2"
+          },
+          {
+            "content": "Completion of the task and expression of gratitude",
+            "type": "heading3"
+          },
+          {
+            "content": "That's it.",
+            "endOffsetMs": 68001,
+            "endTime": "2025-05-08T07:36:36-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 68000,
+            "startTime": "2025-05-08T07:36:36-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's it.",
+            "endOffsetMs": 71000,
+            "endTime": "2025-05-08T07:36:39-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 70001,
+            "startTime": "2025-05-08T07:36:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's it.",
+            "endOffsetMs": 72000,
+            "endTime": "2025-05-08T07:36:40-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 71000,
+            "startTime": "2025-05-08T07:36:39-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "That's it.",
+            "endOffsetMs": 75000,
+            "endTime": "2025-05-08T07:36:43-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 74000,
+            "startTime": "2025-05-08T07:36:42-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We've done a decent job capturing the whole, yeah, mile away out to you.",
+            "endOffsetMs": 84000,
+            "endTime": "2025-05-08T07:36:52-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 79000,
+            "startTime": "2025-05-08T07:36:47-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You have it and",
+            "endOffsetMs": 86000,
+            "endTime": "2025-05-08T07:36:54-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 84000,
+            "startTime": "2025-05-08T07:36:52-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Thank you.",
+            "endOffsetMs": 89000,
+            "endTime": "2025-05-08T07:36:57-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 88000,
+            "startTime": "2025-05-08T07:36:56-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You got this one is real.",
+            "endOffsetMs": 93000,
+            "endTime": "2025-05-08T07:37:01-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 91000,
+            "startTime": "2025-05-08T07:36:59-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So, I'll wait.",
+            "endOffsetMs": 95000,
+            "endTime": "2025-05-08T07:37:03-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 94000,
+            "startTime": "2025-05-08T07:37:02-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Thank you.",
+            "endOffsetMs": 97000,
+            "endTime": "2025-05-08T07:37:05-04:00",
+            "speakerName": "Unknown",
+            "startOffsetMs": 95000,
+            "startTime": "2025-05-08T07:37:03-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You want to throw this in?",
+            "endOffsetMs": 162678,
+            "endTime": "2025-05-08T07:38:10-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 159678,
+            "startTime": "2025-05-08T07:38:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "It's pretty heavy.",
+            "endOffsetMs": 179678,
+            "endTime": "2025-05-08T07:38:27-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 177678,
+            "startTime": "2025-05-08T07:38:25-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Ew, yuck.",
+            "endOffsetMs": 191678,
+            "endTime": "2025-05-08T07:38:39-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 190678,
+            "startTime": "2025-05-08T07:38:38-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "So I don't know why, but the milk is fine.",
+            "endOffsetMs": 195678,
+            "endTime": "2025-05-08T07:38:43-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 192678,
+            "startTime": "2025-05-08T07:38:40-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "We're doing that milk is fine.",
+            "endOffsetMs": 197678,
+            "endTime": "2025-05-08T07:38:45-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 195678,
+            "startTime": "2025-05-08T07:38:43-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Papa, the milk is fine.",
+            "endOffsetMs": 200678,
+            "endTime": "2025-05-08T07:38:48-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 198678,
+            "startTime": "2025-05-08T07:38:46-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yep, the best one.",
+            "endOffsetMs": 207678,
+            "endTime": "2025-05-08T07:38:55-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 206678,
+            "startTime": "2025-05-08T07:38:54-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yep, the milk is fine.",
+            "endOffsetMs": 209678,
+            "endTime": "2025-05-08T07:38:57-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 207678,
+            "startTime": "2025-05-08T07:38:55-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Just had a lot of dishes last night.",
+            "endOffsetMs": 234678,
+            "endTime": "2025-05-08T07:39:22-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 232678,
+            "startTime": "2025-05-08T07:39:20-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Discussing the state of the milk and doing dishes last night.",
+            "type": "heading3"
+          },
+          {
+            "content": "Benetton, uh, we have about 25 minutes.",
+            "endOffsetMs": 266678,
+            "endTime": "2025-05-08T07:39:54-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 263678,
+            "startTime": "2025-05-08T07:39:51-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "You were, you've been doing a great job, Benetton.",
+            "endOffsetMs": 281678,
+            "endTime": "2025-05-08T07:40:09-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 279678,
+            "startTime": "2025-05-08T07:40:07-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Good job, Benetton.",
+            "endOffsetMs": 283678,
+            "endTime": "2025-05-08T07:40:11-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 282678,
+            "startTime": "2025-05-08T07:40:10-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Yeah. Being very responsible, finishing your breakfast all by yourself.",
+            "endOffsetMs": 288678,
+            "endTime": "2025-05-08T07:40:16-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 283678,
+            "startTime": "2025-05-08T07:40:11-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Telling Benetton they have 25 minutes and praising them for finishing breakfast.",
+            "type": "heading3"
+          },
+          {
+            "content": "Which without anybody bugging you.",
+            "endOffsetMs": 291678,
+            "endTime": "2025-05-08T07:40:19-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 289678,
+            "startTime": "2025-05-08T07:40:17-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "No.",
+            "endOffsetMs": 294679,
+            "endTime": "2025-05-08T07:40:22-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 294678,
+            "startTime": "2025-05-08T07:40:22-04:00",
+            "type": "blockquote"
+          },
+          {
+            "content": "Benetton, just don't worry about what's there, you silly bean.",
+            "endOffsetMs": 304678,
+            "endTime": "2025-05-08T07:40:32-04:00",
+            "speakerIdentifier": "user",
+            "speakerName": "You",
+            "startOffsetMs": 299679,
+            "startTime": "2025-05-08T07:40:27-04:00",
+            "type": "blockquote"
+          }
+        ],
+        "id": "kflGokS2O4Q4Cd5ox8rC",
+        "title": "Brief discussion about milk, followed by encouragement and thanks related to an unknown task.",
+        "startTime": "2025-05-08T07:35:28-04:00",
+        "endTime": "2025-05-08T07:40:32-04:00"
+      }
+    ]
+  },
+  "meta": {
+    "lifelogs": {
+      "count": 5,
+      "nextCursor": "eyJwYXJhbXMiOnsiZGlyZWN0aW9uIjoiZGVzYyIsImluY2x1ZGVNYXJrZG93biI6ZmFsc2UsImluY2x1ZGVIZWFkaW5ncyI6dHJ1ZSwidGltZXpvbmUiOiJBbWVyaWNhL05ld19Zb3JrIn0sImN1cnNvclZhbHVlIjoia2ZsR29rUzJPNFE0Q2Q1b3g4ckMifQ=="
+    }
+  }
+}

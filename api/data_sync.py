@@ -10,7 +10,8 @@ sys.path.append(str(Path(__file__).parent.parent))
 from config import (
     LIMITLESS_API_KEY, 
     BEE_API_KEY, 
-    VECTOR_DB_PATH
+    VECTOR_DB_PATH,
+    LIMITLESS_MD_TARGET
 )
 from api.limitless_api import get_lifelogs
 from api.bee_api import get_conversations, get_conversation_details
@@ -32,7 +33,7 @@ class DataSyncer:
         if not self.bee_api_key:
             print("Warning: Bee API key not found. Bee data will not be fetched.")
     
-    def fetch_limitless_data(self, vector_store=None, date=None, limit=None):
+    def fetch_limitless_data(self, vector_store=None, date=None, limit=None, existing_dates=None):
         """
         Fetch data from Limitless API, stopping when we hit existing data.
         
@@ -40,6 +41,7 @@ class DataSyncer:
             vector_store: Optional vector store to check for existing data
             date: Date string in ISO format (YYYY-MM-DD)
             limit: Maximum number of lifelogs to fetch (None means fetch all)
+            existing_dates: Set of dates that already have markdown files
             
         Returns:
             List of lifelogs
@@ -69,9 +71,9 @@ class DataSyncer:
             
             return get_lifelogs(
                 api_key=self.limitless_api_key,
-                date=start_date,
+                date=date or start_date,
                 limit=limit,
-                direction="desc"  # Get newest first so we can stop when we hit existing data
+                existing_dates=existing_dates
             )
         except Exception as e:
             print(f"Error fetching Limitless data: {str(e)}")
@@ -98,9 +100,13 @@ class DataSyncer:
             existing_ids = set()
             latest_date = None
             if vector_store:
-                existing_ids = {id.replace('bee_', '') for id in vector_store.get_document_ids("bee")}
+                # Get all existing Bee IDs and normalize them (removing 'bee_' prefix)
+                raw_ids = vector_store.get_document_ids("bee")
+                # Ensure IDs are strings and clean the prefix
+                existing_ids = {str(id).replace('bee_', '') for id in raw_ids}
                 latest_date = vector_store.get_latest_document_date("bee")
                 print(f"Found {len(existing_ids)} existing Bee documents, latest date: {latest_date}")
+                print(f"First few existing IDs for reference: {list(existing_ids)[:5]}")
 
             conversations = []
             details = {}
@@ -110,9 +116,13 @@ class DataSyncer:
             
             while not found_existing:
                 try:
+                    print(f"Fetching Bee conversations page {page} with batch size {batch_size}")
                     batch = get_conversations(api_key=self.bee_api_key, limit=batch_size, page=page)
                     if not batch:
+                        print("No more conversations to fetch")
                         break
+                    
+                    print(f"Retrieved {len(batch)} conversations in batch")
                         
                     # Sort by date descending to ensure consistent ordering
                     batch.sort(key=lambda x: x.get('start_time', ''), reverse=True)
@@ -121,13 +131,22 @@ class DataSyncer:
                     for conversation in batch:
                         conversation_id = conversation.get('id')
                         if not conversation_id:
+                            print("Skipping conversation with no ID")
                             continue
                         
-                        # If we hit an existing conversation ID, we can stop since they're ordered by date
+                        # Ensure conversation_id is a string for consistent comparison
+                        conversation_id = str(conversation_id)
+                        
+                        # DEBUG: Print for comparison
+                        print(f"Checking conversation ID: {conversation_id}", end="")
+                        
+                        # Check if this conversation ID already exists in our datastore
                         if conversation_id in existing_ids:
-                            print(f"Found existing conversation {conversation_id}, stopping fetch")
+                            print(f" - ALREADY EXISTS in vector store, stopping fetch")
                             found_existing = True
                             break
+                        else:
+                            print(f" - New ID (not in vector store)")
                             
                         # Check the date if we have latest_date
                         if latest_date:
@@ -141,13 +160,16 @@ class DataSyncer:
                                 found_existing = True
                                 break
 
-                        print(f"Fetching details for conversation ID: {conversation_id}")
+                        print(f"Fetching details for bee conversation ID: {conversation_id}")
                         try:
                             conversation_details = get_conversation_details(conversation_id, self.bee_api_key)
                             if conversation_details:
                                 details[conversation_id] = conversation_details
                                 conversations.append(conversation)
                                 print(f"Added new conversation {conversation_id}")
+                                
+                                # Add this ID to our existing set to avoid duplicates in this session
+                                existing_ids.add(conversation_id)
                                 
                                 # Check if we've hit the limit after adding a conversation
                                 if limit and len(conversations) >= limit:
@@ -160,7 +182,13 @@ class DataSyncer:
                             print(f"Error fetching details for conversation {conversation_id}: {e}")
                             continue
                     
+                    # Break if:
+                    # 1. We found existing data
+                    # 2. We got fewer results than requested (end of data)
+                    # 3. We've reached the limit
                     if found_existing or len(batch) < batch_size:
+                        if len(batch) < batch_size:
+                            print("Reached end of available conversations")
                         break
                     
                     page += 1
@@ -175,6 +203,8 @@ class DataSyncer:
                 print(f"Trimmed to {len(conversations)} conversations to match limit")
                 
             if conversations:
+                # Sort conversations by start_time in descending order for consistency
+                conversations.sort(key=lambda x: x.get('start_time', ''), reverse=True)
                 print(f"Retrieved {len(conversations)} new Bee conversations")
                 
             return {
@@ -185,37 +215,124 @@ class DataSyncer:
             print(f"Error in fetch_bee_data: {e}")
             return {}
 
-    def synchronize_data(self, vector_store=None, limit=None):
+    def synchronize_data(self, vector_store=None, start_date=None, end_date=None, days=1, limit_per_day=None, sources=None, include_bee=True, check_existing=False, existing_dates=None):
         """
-        Fetch and synchronize all data from both APIs, skipping existing data.
+        Fetch and synchronize data from APIs, skipping existing data.
         
         Args:
             vector_store: Optional vector store to check for existing data
-            limit: Optional limit on number of entries to fetch per API
+            start_date: Start date in ISO format (YYYY-MM-DD)
+            end_date: End date in ISO format (YYYY-MM-DD)
+            days: Number of days to synchronize if start_date is not provided
+            limit_per_day: Maximum number of entries to fetch per day per API
+            sources: Optional list of sources to fetch ['limitless', 'bee']
+            include_bee: Whether to include Bee data (for backward compatibility)
+            check_existing: Whether to stop fetching when we hit existing data
+            existing_dates: Set of dates that already have markdown files
             
         Returns:
             Dictionary containing synchronized data from both sources
         """
+        # Initialize the data structure
         data = {
             'limitless': [],
             'bee': {}
         }
         
-        # Fetch all Limitless data
-        print("Fetching Limitless data...")
-        limitless_data = self.fetch_limitless_data(vector_store=vector_store, limit=limit)
-        if limitless_data:
-            data['limitless'] = limitless_data
-            print(f"Retrieved {len(limitless_data)} new entries from Limitless API")
+        # Calculate date range if needed
+        if not start_date and not end_date:
+            end_date = datetime.now().strftime('%Y-%m-%d')
+            start_date = (datetime.now() - timedelta(days=days-1)).strftime('%Y-%m-%d')
+            print(f"Date range: {start_date} to {end_date}")
         
-        # Fetch all Bee data
-        print("Fetching Bee data...")
-        bee_data = self.fetch_bee_data(vector_store=vector_store, limit=limit)
-        if bee_data:
-            data['bee'] = bee_data
-            print(f"Retrieved {len(bee_data.get('conversations', []))} new entries from Bee API")
+        # Determine which sources to fetch
+        fetch_limitless = True
+        fetch_bee = include_bee
+        
+        if sources:
+            fetch_limitless = 'limitless' in sources
+            fetch_bee = 'bee' in sources
+        
+        # Fetch Limitless data if requested
+        if fetch_limitless:
+            print("Fetching Limitless data over date range...")
+            limitless_results = []
+            current_date = datetime.strptime(start_date, '%Y-%m-%d')
+            end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
+            while current_date <= end_date_obj:
+                dstr = current_date.strftime('%Y-%m-%d')
+                print(f"Fetching Limitless data for date: {dstr}")
+                batch = self.fetch_limitless_data(
+                    vector_store=vector_store if check_existing else None,
+                    date=dstr,
+                    limit=limit_per_day,
+                    existing_dates=existing_dates
+                )
+                if batch:
+                    limitless_results.extend(batch)
+                    print(f"Retrieved {len(batch)} entries for {dstr}")
+                current_date += timedelta(days=1)
+            data['limitless'] = limitless_results
+            print(f"Total retrieved from Limitless API: {len(limitless_results)} entries")
+        
+        # Fetch Bee data if requested
+        if fetch_bee:
+            print("Fetching Bee data...")
+            bee_data = self.fetch_bee_data(
+                vector_store=vector_store if check_existing else None,
+                date=start_date,
+                limit=limit_per_day
+            )
+            
+            if bee_data:
+                data['bee'] = bee_data
+                print(f"Retrieved {len(bee_data.get('conversations', []))} entries from Bee API")
         
         return data
+    
+    @staticmethod
+    def get_existing_limitless_markdown_dates():
+        """Gets dates of existing Limitless markdown files."""
+        existing_dates = set()
+        
+        try:
+            if not LIMITLESS_MD_TARGET:
+                print("Warning: LIMITLESS_MD_TARGET not set")
+                return existing_dates
+                
+            limitless_md_path = Path(LIMITLESS_MD_TARGET)
+            if not limitless_md_path.exists():
+                print(f"Warning: Limitless markdown directory {LIMITLESS_MD_TARGET} does not exist")
+                return existing_dates
+                
+            # Iterate through year/month-Month directories
+            for year_dir in limitless_md_path.iterdir():
+                if year_dir.is_dir():
+                    for month_dir in year_dir.iterdir():
+                        if month_dir.is_dir():
+                            for md_file in month_dir.iterdir():
+                                if md_file.is_file() and md_file.suffix.lower() == ".md":
+                                    # Expected format: Month-DD-YYYY.md (e.g., May-07-2025.md)
+                                    try:
+                                        parts = md_file.stem.split('-')
+                                        if len(parts) == 3:
+                                            month_name, day_str, year_str = parts
+                                            
+                                            # Convert month name to number (e.g., "May" → 5)
+                                            month_num = datetime.strptime(month_name, "%B").month
+                                            
+                                            # Format as YYYY-MM-DD for API comparison
+                                            date_str = f"{year_str}-{month_num:02d}-{day_str}"
+                                            existing_dates.add(date_str)
+                                    except ValueError:
+                                        print(f"Warning: Could not parse date from filename: {md_file.name}")
+                                    
+            print(f"Found {len(existing_dates)} existing Limitless markdown files")
+            return existing_dates
+                                    
+        except Exception as e:
+            print(f"Error getting existing Limitless markdown dates: {e}")
+            return existing_dates
     
     @staticmethod
     def extract_date_from_iso(iso_string):

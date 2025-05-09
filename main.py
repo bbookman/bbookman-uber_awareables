@@ -15,7 +15,7 @@ def main():
     
     # Fetch data from both APIs
     print("\n=== Fetching Data ===")
-    data = syncer.synchronize_data(limit=None)  # Remove the limit to get all data
+    data = syncer.synchronize_data(days=90, limit_per_day=None)  # Fetch last 90 days of data
     
     if not data:
         print("No data retrieved from APIs")

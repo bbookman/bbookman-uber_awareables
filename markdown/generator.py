@@ -486,6 +486,44 @@ class MarkdownGenerator:
         
         return content
 
+    def ensure_fresh_limitless_data(self, days_to_check=30):
+        """
+        Check for and fetch new Limitless data before generating markdown.
+        
+        Args:
+            days_to_check: How many days to check for new data if no existing data is found
+            
+        Returns:
+            Dictionary with information about any ingested data
+        """
+        if self.debug:
+            print("Ensuring fresh Limitless data before generating markdown files...")
+            
+        # Check vector store stats before fetching
+        before_stats = self.vector_store.get_stats()
+        limitless_count_before = before_stats.get('sources', {}).get('limitless', 0)
+        
+        # Use the auto_fetch_limitless_data method from DataIngestion
+        result = self.data_ingestion.auto_fetch_limitless_data(days_to_check)
+        
+        # Check if new data was added
+        after_stats = self.vector_store.get_stats()
+        limitless_count_after = after_stats.get('sources', {}).get('limitless', 0)
+        
+        if limitless_count_after > limitless_count_before:
+            if self.debug:
+                print(f"Added {limitless_count_after - limitless_count_before} new Limitless documents")
+                
+            # Return dates with new data
+            return result
+        else:
+            if self.debug:
+                print("No new Limitless data found or added")
+            return {
+                "new_data_found": False,
+                "dates_ingested": [],
+                "documents_added": 0
+            }
 
 if __name__ == "__main__":
     # Example usage

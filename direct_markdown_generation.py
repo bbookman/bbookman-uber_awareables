@@ -516,6 +516,24 @@ def main():
         action="store_true",
         help="Enable debug output from the MarkdownGenerator and this script."
     )
+    parser.add_argument(
+        "--auto-fetch",
+        action="store_true",
+        default=True,
+        help="Automatically fetch new Limitless data before generating markdown. Default: True"
+    )
+    parser.add_argument(
+        "--no-fetch",
+        action="store_false",
+        dest="auto_fetch",
+        help="Skip auto-fetch of Limitless data and only use existing vector store data."
+    )
+    parser.add_argument(
+        "--days-to-check",
+        type=int,
+        default=30,
+        help="Number of days to check for new data when auto-fetching. Default: 30"
+    )
     args = parser.parse_args()
 
     generator_debug_enabled = args.debug
@@ -534,6 +552,19 @@ def main():
         bee_output_path=BEE_MD_TARGET, # Pass even if primary focus is limitless
         debug=args.debug
     )
+
+    # Auto-fetch Limitless data if requested
+    if args.auto_fetch:
+        print("Checking for new Limitless data...")
+        result = generator.ensure_fresh_limitless_data(days_to_check=args.days_to_check)
+        if result["new_data_found"]:
+            print(f"Added {result['documents_added']} new Limitless documents to vector store")
+            if result["dates_ingested"]:
+                print(f"New data for dates: {sorted(result['dates_ingested'])}")
+        else:
+            print("No new Limitless data found or added")
+    else:
+        print("Auto-fetch disabled. Using only existing vector store data.")
 
     if args.date_str:
         print(f"Generating markdown for specific date: {args.date_str}")
@@ -588,22 +619,31 @@ def main():
                 try:
                     date_obj_to_generate = datetime.strptime(date_str_to_generate, "%Y-%m-%d").date()
                     
-                    # IMPORTANT ASSUMPTION:
-                    # generator.generate_markdown_for_date can accept a 'source_filter'
-                    # and will only process/write data for 'limitless' into its designated path.
-                    # If it writes an empty file when no 'limitless' data exists for that date,
-                    # that might be acceptable. The key is it shouldn't mix sources or fail.
-                    generator.generate_markdown_for_date(date_obj_to_generate, source_filter=["limitless"])
+                    # Get all documents for this date and source
+                    documents = [doc for doc in generator.vector_store.documents 
+                               if doc.get("source") == "limitless" and doc.get("date") == date_str_to_generate]
                     
-                    # To be more robust, one might check if the file was actually created,
-                    # and if it has content, but this depends on generator's specific behavior.
-                    print(f"Limitless markdown generation initiated for {date_str_to_generate}.")
-                    generated_count += 1
+                    if not documents:
+                        print(f"No Limitless documents found for {date_str_to_generate}. Skipping.")
+                        continue
+                    
+                    # Generate markdown for this specific date and source
+                    result = generator._generate_source_markdown(date_obj_to_generate, "limitless", force_regenerate=False)
+                    
+                    if result["status"] == "generated":
+                        print(f"Generated Limitless markdown for {date_str_to_generate} with {result['conversations_count']} conversations.")
+                        generated_count += 1
+                    elif result["status"] == "skipped":
+                        print(f"Skipped {date_str_to_generate}: File already exists.")
+                        generated_count += 1
+                    else:
+                        print(f"No Limitless conversations found for {date_str_to_generate}.")
+                    
                 except Exception as e:
                     print(f"Error generating Limitless markdown for {date_str_to_generate}: {e}", file=sys.stderr)
             
             if generated_count > 0:
-                print(f"Finished attempting to generate {generated_count} missing Limitless markdown file(s).")
+                print(f"Finished generating {generated_count} Limitless markdown file(s).")
             else:
                 # This could happen if all "missing" dates actually had no 'limitless' data
                 print("No new Limitless files were generated (possibly no 'limitless' data for those dates, or errors occurred).")
