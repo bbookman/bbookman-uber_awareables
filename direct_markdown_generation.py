@@ -193,8 +193,9 @@ def generate_markdown_files(docs_by_source_date):
                 print(f"Error creating directories for {source} on {date_str}: {e}")
                 continue
             
-            # Create filename
-            filename = f"{month_name}-{date_obj.day:02d}-{year}.md"
+            # Create filename: Weekday - Month - Day - Year.md
+            weekday = date_obj.strftime('%A')
+            filename = f"{weekday} - {month_name} - {date_obj.day:02d} - {year}.md"
             output_file = month_dir / filename
             
             # Sort conversations by timestamp

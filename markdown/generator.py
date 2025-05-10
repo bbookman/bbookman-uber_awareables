@@ -101,16 +101,15 @@ class MarkdownGenerator:
     
     def _get_filename(self, date_obj):
         """
-        Generate a filename for a specific date.
-        
-        Args:
-            date_obj: Date as a datetime object
-            
-        Returns:
-            Filename in format MMMM-DD-YYYY.md
+        Generate a filename for a specific date in format:
+        Weekday_Month_Day_Year.md
         """
+        weekday = date_obj.strftime('%A')  # Full weekday name
         month_name = self._get_month_name(date_obj.month)
-        return f"{month_name}-{date_obj.day:02d}-{date_obj.year}.md"
+        day = f"{date_obj.day:02d}"  # Day number padded
+        year = date_obj.year
+        # Use underscores with no spaces
+        return f"{weekday}_{month_name}_{day}_{year}.md"
     
     def _format_timestamp(self, timestamp_str, format_str='%I:%M %p'):
         """
